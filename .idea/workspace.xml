@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="Mybatis-Plus数据库基本操作">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_hutool_hutool_all_5_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_65.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_65.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_65.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_6_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_6_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_6_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_6_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Anyview.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/shims-vue.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/views/AboutView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/views/HomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/tests/unit/example.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/FillQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/FillQuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/JudgeQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/JudgeQuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/MultiQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/MultiQuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MyWebConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MyWebConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/PaperManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/PaperManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ScoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ScoreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/TeacherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/FillQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/FillQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/JudgeQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/JudgeQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/MultiQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/MultiQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/PaperManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/PaperManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IExamManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IExamManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IPaperManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IPaperManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ITeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/PaperManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/PaperManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ScoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/ExamManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/ExamManageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/FillQuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/FillQuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/JudgeQuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/JudgeQuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/MultiQuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/MultiQuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/PaperManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/PaperManageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/ScoreMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/TeacherMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/springboot" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Environment/Maven" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EXHSZKc3hSpa7VfS38fcwIfS5K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "G:/Work/workspace/web/Anyview/springboot/src/main/resources",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "d164d99c46d45be6b1e7585ff7ea10e7",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Work\workspace\web\Anyview\springboot\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.CodeGenerator">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qing.www.util.CodeGenerator" />
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qing.www.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qing.www.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="" />
+      <created>1662735008356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662735008356</updated>
+      <workItem from="1662735009728" duration="1888000" />
+      <workItem from="1662777322003" duration="1241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Mybatis-Plus数据库基本操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mybatis-Plus数据库基本操作" />
+  </component>
+</project>

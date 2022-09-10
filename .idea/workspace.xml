@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="Mybatis-Plus数据库基本操作" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="Mybatis-Plus数据库基本操作">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "G:/Work/workspace/web/Anyview/springboot/src/main/resources",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "4eae35f1b35977a00ebd8086c259d4c9",
     "vue.rearranger.settings.migration": "true"
   },
@@ -115,7 +117,7 @@
       <updated>1662735008356</updated>
       <workItem from="1662735009728" duration="1888000" />
       <workItem from="1662777322003" duration="1595000" />
-      <workItem from="1662779583621" duration="1040000" />
+      <workItem from="1662779583621" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -156,7 +158,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -164,6 +178,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/springboot" />
+    </ignored-roots>
     <MESSAGE value="Mybatis-Plus数据库基本操作" />
     <option name="LAST_COMMIT_MESSAGE" value="Mybatis-Plus数据库基本操作" />
   </component>

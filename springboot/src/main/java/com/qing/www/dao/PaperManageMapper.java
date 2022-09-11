@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 public interface PaperManageMapper extends BaseMapper<PaperManage> {
 

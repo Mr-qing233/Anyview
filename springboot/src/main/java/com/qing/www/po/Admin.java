@@ -12,7 +12,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 @Getter
 @Setter
@@ -45,4 +45,6 @@ public class Admin implements Serializable {
      * 管理员权限
      */
     private Integer permission;
+
+
 }

@@ -13,7 +13,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 @Getter
 @Setter
@@ -82,4 +82,6 @@ public class MultiQuestion implements Serializable {
      * 难度等级
      */
     private String level;
+
+
 }

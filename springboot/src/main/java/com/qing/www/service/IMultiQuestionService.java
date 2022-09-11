@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 public interface IMultiQuestionService extends IService<MultiQuestion> {
 

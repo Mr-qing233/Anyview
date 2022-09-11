@@ -11,7 +11,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 @Getter
 @Setter
@@ -34,4 +34,6 @@ public class PaperManage implements Serializable {
      * 题目编号
      */
     private Integer questionId;
+
+
 }

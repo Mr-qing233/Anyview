@@ -13,7 +13,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Gin
- * @since 2022-09-10
+ * @since 2022-09-11
  */
 @Getter
 @Setter
@@ -87,4 +87,6 @@ public class ExamManage implements Serializable {
      * 考生须知
      */
     private String tips;
+
+
 }

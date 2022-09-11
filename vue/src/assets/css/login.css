@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.site{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #03a9f4;
+  transition: 0.5s;
+}
+
+.site.active{
+  background: #f43648;
+}
+
+.container{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+}
+
+.blueBg{
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box h2{
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.formBox{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.formBox.active{
+  left: 50%;
+}
+
+.formBox .form{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: 0.5s;
+}
+
+.formBox .signInForm{
+  transition-delay: 0.25s;
+}
+
+.formBox.active .signInForm{
+  left: -100%;
+  transition-delay: 0s;
+}
+
+.formBox .signUpForm{
+  left: 100%;
+  transition-delay: 0s;
+}
+
+.formBox.active .signUpForm{
+  left: 0;
+  transition-delay: 0.25s;
+}
+
+.formBox .form .el-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formBox .form .el-form h3{
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.formBox .form .el-form .el-input{
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.formBox .form .el-form .el-input .el-input__wrapper{
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+}
+.formBox .form .el-form .el-input .el-input__wrapper .el-input__inner{
+  margin-bottom: 0;
+  padding: 0px;
+  border: none;
+}
+.verCode{
+  position: relative;
+}
+.formBox .form .el-form .code{
+  width: 65%;
+  float: left;
+}
+.formBox .form .el-form .send{
+  margin:0;
+  padding: 0;
+  height: 50px;
+  float: right;
+  width: 30%;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.formBox .form .el-form input{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #333;
+}
+.el-form-item{
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.el-form-item__content{
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.formBox .form .el-button{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  background: #03a9f4;
+  border: none;
+  color: #fff;
+  max-width: 100px;
+  cursor: pointer;
+  height: 50px;
+}
+.formBox .form .el-form-item{
+  margin: 0;
+  padding: 0;
+}
+
+.formBox.active .signUpForm .el-button{
+  background: #f43648;
+}
+
+@media (max-width: 991px){
+  .container{
+    max-width: 400px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .blueBg{
+    top:0;
+    height: 100%;
+  }
+  .formBox{
+    width: 100%;
+    height: 500px;
+    top: 0;
+    box-shadow: none;
+  }
+  .blueBg .box{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+  }
+  .blueBg .signIn{
+    top: 0;
+  }
+  .formBox.active{
+    left: 0;
+    top:150px;
+  }
+}
+
+.el-form-item__error{
+  margin-top:-20px;
+  float: left;
+}

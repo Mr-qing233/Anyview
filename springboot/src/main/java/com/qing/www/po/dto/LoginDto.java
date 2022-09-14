@@ -1,7 +1,8 @@
-package com.qing.www.util.common;
+package com.qing.www.po.dto;
 
 
 import lombok.Data;
+
 
 /**
  * <p>
@@ -9,7 +10,7 @@ import lombok.Data;
  * </p>
  */
 @Data
-public class CommonLogin {
+public class LoginDto {
     private Integer cardId;
     private String pwd;
 }

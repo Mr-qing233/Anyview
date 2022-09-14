@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="Mybatis-Plus数据库基本操作">
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/LoginMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/dto/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ILoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="登录相关数据库基本操作">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/TokenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ILoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,9 @@
       <recent name="G:\Work\workspace\web\Anyview\vue" />
       <recent name="G:\Work\workspace\web\Anyview\springboot\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qing.www.util" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -150,7 +154,8 @@
       <workItem from="1662899145868" duration="905000" />
       <workItem from="1662906301530" duration="1431000" />
       <workItem from="1663078706578" duration="1111000" />
-      <workItem from="1663158482197" duration="4128000" />
+      <workItem from="1663158482197" duration="4242000" />
+      <workItem from="1663170677592" duration="1881000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -201,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662898321873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="登录相关数据库基本操作">
+      <created>1663169710820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663169710820</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +249,8 @@
       <path value="$PROJECT_DIR$/vue" />
     </ignored-roots>
     <MESSAGE value="Mybatis-Plus数据库基本操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mybatis-Plus数据库基本操作" />
+    <MESSAGE value="登录相关数据库基本操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录相关数据库基本操作" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

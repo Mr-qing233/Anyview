@@ -46,5 +46,10 @@ public class Admin implements Serializable {
      */
     private Integer permission;
 
+    /**
+     * 设置token
+     */
+    private String token;
+
 
 }

@@ -7,7 +7,7 @@ import com.qing.www.po.Teacher;
 import com.qing.www.po.dto.LoginDto;
 
 public interface ILoginService extends IService<LoginDto> {
-    public Admin adminLogin(Integer cardId,String pwd);
-    public Teacher teacherLogin(Integer cardId, String pwd);
-    public Student studentLogin(Integer cardId, String pwd);
+    public Admin adminLogin(LoginDto loginDto);
+    public Teacher teacherLogin(LoginDto loginDto);
+    public Student studentLogin(LoginDto loginDto);
 }

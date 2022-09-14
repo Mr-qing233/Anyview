@@ -21,7 +21,7 @@ public class Student implements Serializable {
     /**
      * 学生id
      */
-    private Integer studentIde;
+    private Integer studentId;
 
     /**
      * 学生姓名
@@ -67,6 +67,11 @@ public class Student implements Serializable {
      * 权限
      */
     private Integer permission;
+
+    /**
+     * 设置token
+     */
+    private String token;
 
 
 }

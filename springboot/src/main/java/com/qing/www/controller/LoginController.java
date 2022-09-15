@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 
 /**
  * <p>
@@ -25,19 +27,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class LoginController {
 
+    @Resource
     private ILoginService loginService;
 
     @PostMapping("/login")
     public CommonResult login(@RequestBody LoginDto loginDto){
         int length = loginDto.getCardId().toString().length();
         switch (length){
-            case '4':
+            case 4:
                 Admin admin = loginService.adminLogin(loginDto);
                 return CommonResult.Success(admin);
-            case '6':
+            case 6:
                 Teacher teacher = loginService.teacherLogin(loginDto);
                 return CommonResult.Success(teacher);
-            case '8':
+            case 8:
                 Student student = loginService.studentLogin(loginDto);
                 return CommonResult.Success(student);
             default:

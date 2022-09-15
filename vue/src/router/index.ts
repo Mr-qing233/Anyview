@@ -5,9 +5,21 @@ import {createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw} fr
 // @ts-ignore
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/',//登录页面
     name: 'login',
     component: ()=>import('../views/Login.vue')
+  },
+  {
+    path:'/admin',//管理员首页
+    component:()=>import('../components/admin/index.vue')
+  },
+  {
+    path:'/teacher',//教师首页
+    component:()=>import('../components/teacher/index.vue')
+  },
+  {
+    path:'/student',//学生首页
+    component:()=>import('../components/student/index.vue')
   },
 ];
 

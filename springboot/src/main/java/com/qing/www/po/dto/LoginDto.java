@@ -1,6 +1,7 @@
 package com.qing.www.po.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 
@@ -11,6 +12,8 @@ import lombok.Data;
  */
 @Data
 public class LoginDto {
+    @JsonProperty("cardId")
     private Integer cardId;
+    @JsonProperty("pwd")
     private String pwd;
 }

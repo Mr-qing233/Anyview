@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
-    </list>
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +149,7 @@
       <workItem from="1663158482197" duration="4242000" />
       <workItem from="1663170677592" duration="1984000" />
       <workItem from="1663242121576" duration="3248000" />
-      <workItem from="1663254905469" duration="1050000" />
+      <workItem from="1663254905469" duration="1103000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -224,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663245835127</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[登录逻辑][已测试][前端已完成][已测试][后端已完成]">
+      <created>1663256003328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663256003328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +267,8 @@
     <MESSAGE value="登录相关数据库基本操作" />
     <MESSAGE value="[未测试][前端未完成][后端已完成]登录逻辑完成[包含判断登录角色]" />
     <MESSAGE value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
+    <MESSAGE value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

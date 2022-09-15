@@ -1,6 +1,11 @@
 package com.qing.www.po;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,11 +26,13 @@ public class Student implements Serializable {
     /**
      * 学生id
      */
-    private Integer studentIde;
+    @TableId(value = "studentId", type = IdType.AUTO)
+    private Integer studentId;
 
     /**
      * 学生姓名
      */
+    @TableField(value = "studentName")
     private String studentName;
 
     /**
@@ -36,7 +43,7 @@ public class Student implements Serializable {
     /**
      * 学院
      */
-    private String institue;
+    private String institute;
 
     /**
      * 专业
@@ -51,11 +58,13 @@ public class Student implements Serializable {
     /**
      * 账号
      */
+    @TableField(value = "cardId")
     private Integer cardId;
 
     /**
      * 密码
      */
+    @JsonIgnore
     private String pwd;
 
     /**
@@ -67,6 +76,12 @@ public class Student implements Serializable {
      * 权限
      */
     private Integer permission;
+
+    /**
+     * 设置token
+     */
+    @TableField(exist = false)
+    private String token;
 
 
 }

@@ -45,8 +45,21 @@ const login =()=>{
       request.post('/user/login',user).then((res: any)=>{
         if(res.code=='200'){
           localStorage.setItem("user",JSON.stringify(res.data))//存储用户信息到浏览器
-          router.push("/Home")
-          ElMessage.success("登录"+res.msg)
+          let resData=res.data
+          switch (resData.permission.valueOf()){
+            case 0://管理员
+              router.push("/admin")
+              ElMessage.success("管理员登录"+res.msg)
+              break
+            case 1://教师
+              ElMessage.success("教师登录"+res.msg)
+              router.push("/teacher")
+              break
+            case 2://学生
+              ElMessage.success("学生登录"+res.msg)
+              router.push("/student")
+              break
+          }
         }else {
           ElMessage.error("错误码"+res.code+":"+res.msg)
         }

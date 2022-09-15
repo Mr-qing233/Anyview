@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="Mybatis-Plus数据库基本操作" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +17,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="Vue Single File Component" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -56,9 +65,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src/components/teacher&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4eae35f1b35977a00ebd8086c259d4c9&quot;,
     &quot;ts.external.directory.path&quot;: &quot;G:\\Work\\workspace\\web\\Anyview\\vue\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -71,8 +80,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Work\workspace\web\Anyview\vue\src\components\teacher" />
+      <recent name="G:\Work\workspace\web\Anyview\vue\src\components\student" />
       <recent name="G:\Work\workspace\web\Anyview\vue" />
       <recent name="G:\Work\workspace\web\Anyview\springboot\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qing.www.util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -132,6 +146,13 @@
       <workItem from="1662880535372" duration="5900000" />
       <workItem from="1662889860811" duration="2252000" />
       <workItem from="1662898278511" duration="121000" />
+      <workItem from="1662899145868" duration="905000" />
+      <workItem from="1662906301530" duration="1431000" />
+      <workItem from="1663078706578" duration="1111000" />
+      <workItem from="1663158482197" duration="4242000" />
+      <workItem from="1663170677592" duration="1984000" />
+      <workItem from="1663242121576" duration="3248000" />
+      <workItem from="1663254905469" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -182,7 +203,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662898321873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="登录相关数据库基本操作">
+      <created>1663169710820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663169710820</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[未测试][前端未完成][后端已完成]登录逻辑完成[包含判断登录角色]">
+      <created>1663172653277</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663172653278</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成">
+      <created>1663245835127</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663245835127</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,9 +257,13 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
+      <path value="$PROJECT_DIR$/vue" />
     </ignored-roots>
     <MESSAGE value="Mybatis-Plus数据库基本操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mybatis-Plus数据库基本操作" />
+    <MESSAGE value="登录相关数据库基本操作" />
+    <MESSAGE value="[未测试][前端未完成][后端已完成]登录逻辑完成[包含判断登录角色]" />
+    <MESSAGE value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

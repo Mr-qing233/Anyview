@@ -3,6 +3,8 @@
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.41">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <ServerVersion>8.0.30</ServerVersion>
     </root>
     <schema id="2" parent="1" name="anyview">
@@ -16,516 +18,721 @@
     <schema id="8" parent="1" name="sys"/>
     <schema id="9" parent="1" name="test"/>
     <schema id="10" parent="1" name="world"/>
-    <table id="11" parent="2" name="admin"/>
-    <table id="12" parent="2" name="exam_manage">
-      <Comment>考试管理表</Comment>
+    <table id="11" parent="2" name="t_exam_paper">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="13" parent="2" name="fill_question">
-      <Comment>填空题题库</Comment>
+    <table id="12" parent="2" name="t_exam_paper_answer">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="14" parent="2" name="judge_question">
-      <Comment>判断题题库表</Comment>
+    <table id="13" parent="2" name="t_exam_paper_question_customer_answer">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="15" parent="2" name="multi_question">
-      <Comment>选择题题库表</Comment>
+    <table id="14" parent="2" name="t_message">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="16" parent="2" name="paper_manage">
-      <Comment>试卷管理表</Comment>
+    <table id="15" parent="2" name="t_message_user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="17" parent="2" name="score">
-      <Comment>成绩管理表</Comment>
+    <table id="16" parent="2" name="t_question">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="18" parent="2" name="student"/>
-    <table id="19" parent="2" name="teacher"/>
-    <column id="20" parent="11" name="adminId">
+    <table id="17" parent="2" name="t_subject">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="18" parent="2" name="t_task_exam">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="19" parent="2" name="t_task_exam_customer_answer">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="20" parent="2" name="t_text_content">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="21" parent="2" name="t_user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="22" parent="2" name="t_user_event_log">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="23" parent="2" name="t_user_token">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="24" parent="11" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <Comment>管理员id</Comment>
-      <DataType>INT(10)|4s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="21" parent="11" name="adminName">
-      <Comment>管理员名字</Comment>
-      <DataType>CHAR(30)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="25" parent="11" name="name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="22" parent="11" name="cardId">
-      <Comment>账号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
+    <column id="26" parent="11" name="subject_id">
+      <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="23" parent="11" name="pwd">
-      <Comment>密码</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="27" parent="11" name="paper_type">
+      <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="24" parent="11" name="permission">
-      <Comment>管理员权限</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>0</DefaultExpression>
-      <NotNull>1</NotNull>
+    <column id="28" parent="11" name="grade_level">
+      <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="25" parent="11" name="PRIMARY">
-      <ColNames>adminId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="26" parent="11" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexColNames>adminId</UnderlyingIndexColNames>
-    </key>
-    <column id="27" parent="12" name="examCode">
-      <AutoIncrement>1</AutoIncrement>
-      <Comment>考试编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="28" parent="12" name="description">
-      <Comment>该次考试介绍</Comment>
-      <DataType>VARCHAR(50)|12s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="29" parent="12" name="source">
-      <Comment>课程名称</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="30" parent="12" name="paperId">
-      <Comment>试卷编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="31" parent="12" name="examDate">
-      <Comment>考试日期</Comment>
-      <DataType>VARCHAR(10)|12s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="32" parent="12" name="totalTime">
-      <Comment>持续时长</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="29" parent="11" name="score">
+      <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="33" parent="12" name="grade">
-      <Comment>年级</Comment>
-      <DataType>VARCHAR(10)|12s</DataType>
+    <column id="30" parent="11" name="question_count">
+      <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="34" parent="12" name="term">
-      <Comment>学期</Comment>
-      <DataType>VARCHAR(10)|12s</DataType>
+    <column id="31" parent="11" name="suggest_time">
+      <DataType>int|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="35" parent="12" name="major">
-      <Comment>专业</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
+    <column id="32" parent="11" name="limit_start_time">
+      <DataType>datetime|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="36" parent="12" name="institute">
-      <Comment>学院</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
+    <column id="33" parent="11" name="limit_end_time">
+      <DataType>datetime|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="37" parent="12" name="totalScore">
-      <Comment>总分</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="34" parent="11" name="frame_text_content_id">
+      <DataType>int|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="38" parent="12" name="type">
-      <Comment>考试类型</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="35" parent="11" name="create_user">
+      <DataType>int|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="39" parent="12" name="tips">
-      <Comment>考生须知</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="36" parent="11" name="create_time">
+      <DataType>datetime|0s</DataType>
       <Position>13</Position>
     </column>
-    <index id="40" parent="12" name="PRIMARY">
-      <ColNames>examCode</ColNames>
-      <NameSurrogate>1</NameSurrogate>
+    <column id="37" parent="11" name="deleted">
+      <DataType>bit(1)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="38" parent="11" name="task_exam_id">
+      <DataType>int|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <index id="39" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="12" name="PRIMARY">
+    <key id="40" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>examCode</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="42" parent="13" name="questionId">
+    <column id="41" parent="12" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <Comment>试题编号</Comment>
-      <DataType>INT(10)|4s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="43" parent="13" name="subject">
-      <Comment>考试科目</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
+    <column id="42" parent="12" name="exam_paper_id">
+      <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="44" parent="13" name="question">
-      <Comment>试题内容</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="43" parent="12" name="paper_name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="45" parent="13" name="answer">
-      <Comment>正确答案</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="44" parent="12" name="paper_type">
+      <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="46" parent="13" name="analysis">
-      <Comment>题目解析</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="45" parent="12" name="subject_id">
+      <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="47" parent="13" name="score">
-      <Comment>分数</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>2</DefaultExpression>
+    <column id="46" parent="12" name="system_score">
+      <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="48" parent="13" name="level">
-      <Comment>难度等级</Comment>
-      <DataType>VARCHAR(5)|12s</DataType>
+    <column id="47" parent="12" name="user_score">
+      <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="49" parent="13" name="section">
-      <Comment>所属章节</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
+    <column id="48" parent="12" name="paper_score">
+      <DataType>int|0s</DataType>
       <Position>8</Position>
     </column>
-    <index id="50" parent="13" name="PRIMARY">
-      <ColNames>questionId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="51" parent="13" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexColNames>questionId</UnderlyingIndexColNames>
-    </key>
-    <column id="52" parent="14" name="questionId">
-      <AutoIncrement>1</AutoIncrement>
-      <Comment>试题编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="53" parent="14" name="subject">
-      <Comment>考试科目</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="54" parent="14" name="question">
-      <Comment>试题内容</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="55" parent="14" name="answer">
-      <Comment>正确答案</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="56" parent="14" name="analysis">
-      <Comment>题目解析</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="57" parent="14" name="score">
-      <Comment>分数</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>2</DefaultExpression>
-      <Position>6</Position>
-    </column>
-    <column id="58" parent="14" name="level">
-      <Comment>难度等级</Comment>
-      <DataType>VARCHAR(1)|12s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="59" parent="14" name="section">
-      <Comment>所属章节</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
-      <Position>8</Position>
-    </column>
-    <index id="60" parent="14" name="PRIMARY">
-      <ColNames>questionId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="61" parent="14" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexColNames>questionId</UnderlyingIndexColNames>
-    </key>
-    <column id="62" parent="15" name="questionId">
-      <AutoIncrement>1</AutoIncrement>
-      <Comment>试题编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="63" parent="15" name="subject">
-      <Comment>考试科目</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="64" parent="15" name="question">
-      <Comment>问题题目</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="65" parent="15" name="answerA">
-      <Comment>选项A</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="66" parent="15" name="answerB">
-      <Comment>选项B</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="67" parent="15" name="answerC">
-      <Comment>选项C</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="68" parent="15" name="answerD">
-      <Comment>选项D</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="69" parent="15" name="rightAnswer">
-      <Comment>正确答案</Comment>
-      <DataType>VARCHAR(10)|12s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="70" parent="15" name="analysis">
-      <Comment>题目解析</Comment>
-      <DataType>VARCHAR(255)|12s</DataType>
+    <column id="49" parent="12" name="question_correct">
+      <DataType>int|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="71" parent="15" name="score">
-      <Comment>分数</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>2</DefaultExpression>
+    <column id="50" parent="12" name="question_count">
+      <DataType>int|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="72" parent="15" name="section">
-      <Comment>所属章节</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
+    <column id="51" parent="12" name="do_time">
+      <DataType>int|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="73" parent="15" name="level">
-      <Comment>难度等级</Comment>
-      <DataType>VARCHAR(1)|12s</DataType>
+    <column id="52" parent="12" name="status">
+      <DataType>int|0s</DataType>
       <Position>12</Position>
     </column>
-    <index id="74" parent="15" name="PRIMARY">
-      <ColNames>questionId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
+    <column id="53" parent="12" name="create_user">
+      <DataType>int|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="54" parent="12" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="55" parent="12" name="task_exam_id">
+      <DataType>int|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <index id="56" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="75" parent="15" name="PRIMARY">
+    <key id="57" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>questionId</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="76" parent="16" name="paperId">
-      <Comment>试卷编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="77" parent="16" name="questionType">
-      <Comment>题目类型</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="78" parent="16" name="questionId">
-      <Comment>题目编号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="79" parent="17" name="scoreId">
+    <column id="58" parent="13" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <Comment>分数编号</Comment>
-      <DataType>INT(10)|4s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="80" parent="17" name="examCode">
-      <Comment>考试编号</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="59" parent="13" name="question_id">
+      <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="81" parent="17" name="studentId">
-      <Comment>学号</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="60" parent="13" name="exam_paper_id">
+      <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="82" parent="17" name="subject">
-      <Comment>课程名称</Comment>
-      <DataType>VARCHAR(20)|12s</DataType>
-      <NotNull>1</NotNull>
+    <column id="61" parent="13" name="exam_paper_answer_id">
+      <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="83" parent="17" name="ptScore">
-      <Comment>平时成绩</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="62" parent="13" name="question_type">
+      <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="84" parent="17" name="etScore">
-      <Comment>期末成绩</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="63" parent="13" name="subject_id">
+      <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="85" parent="17" name="score">
-      <Comment>总成绩</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="64" parent="13" name="customer_score">
+      <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="86" parent="17" name="answerDate">
-      <Comment>答题日期</Comment>
-      <DataType>VARCHAR(10)|12s</DataType>
+    <column id="65" parent="13" name="question_score">
+      <DataType>int|0s</DataType>
       <Position>8</Position>
     </column>
-    <index id="87" parent="17" name="PRIMARY">
-      <ColNames>scoreId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="88" parent="17" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexColNames>scoreId</UnderlyingIndexColNames>
-    </key>
-    <column id="89" parent="18" name="studentIde">
-      <Comment>学生id</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="90" parent="18" name="studentName">
-      <Comment>学生姓名</Comment>
-      <DataType>CHAR(10)|1s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="91" parent="18" name="grade">
-      <Comment>学生年级</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="92" parent="18" name="institue">
-      <Comment>学院</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="93" parent="18" name="major">
-      <Comment>专业</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="94" parent="18" name="class">
-      <Comment>班级</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="95" parent="18" name="cardId">
-      <Comment>账号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <column id="96" parent="18" name="pwd">
-      <Comment>密码</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-    </column>
-    <column id="97" parent="18" name="sex">
-      <Comment>性别</Comment>
-      <DataType>CHAR(2)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="66" parent="13" name="question_text_content_id">
+      <DataType>int|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="98" parent="18" name="permission">
-      <Comment>权限</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>2</DefaultExpression>
-      <NotNull>1</NotNull>
+    <column id="67" parent="13" name="answer">
+      <DataType>varchar(255)|0s</DataType>
       <Position>10</Position>
     </column>
-    <index id="99" parent="18" name="PRIMARY">
-      <ColNames>studentIde</ColNames>
-      <NameSurrogate>1</NameSurrogate>
+    <column id="68" parent="13" name="text_content_id">
+      <DataType>int|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="69" parent="13" name="do_right">
+      <DataType>bit(1)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="70" parent="13" name="create_user">
+      <DataType>int|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="71" parent="13" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="72" parent="13" name="item_order">
+      <DataType>int|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <index id="73" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="100" parent="18" name="PRIMARY">
+    <key id="74" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>studentIde</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="101" parent="19" name="teacherId">
-      <Comment>老师id</Comment>
-      <DataType>INT(10)|4s</DataType>
+    <column id="75" parent="14" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="102" parent="19" name="teacherName">
-      <Comment>老师名字</Comment>
-      <DataType>CHAR(10)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="76" parent="14" name="title">
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="103" parent="19" name="institute">
-      <Comment>学院</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="77" parent="14" name="content">
+      <DataType>varchar(500)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="104" parent="19" name="course">
-      <Comment>课程</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="78" parent="14" name="create_time">
+      <DataType>datetime|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="105" parent="19" name="cardId">
-      <Comment>账号</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
+    <column id="79" parent="14" name="send_user_id">
+      <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="106" parent="19" name="pwd">
-      <Comment>密码</Comment>
-      <DataType>CHAR(20)|1s</DataType>
-      <NotNull>1</NotNull>
+    <column id="80" parent="14" name="send_user_name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="107" parent="19" name="permission">
-      <Comment>权限</Comment>
-      <DataType>INT(10)|4s</DataType>
-      <DefaultExpression>1</DefaultExpression>
-      <NotNull>1</NotNull>
+    <column id="81" parent="14" name="send_real_name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="108" parent="19" name="PRIMARY">
-      <ColNames>teacherId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
+    <column id="82" parent="14" name="receive_user_count">
+      <DataType>int|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="83" parent="14" name="read_count">
+      <DataType>int|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <index id="84" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="109" parent="19" name="PRIMARY">
+    <key id="85" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>teacherId</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="86" parent="15" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="87" parent="15" name="message_id">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="88" parent="15" name="receive_user_id">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="89" parent="15" name="receive_user_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="90" parent="15" name="receive_real_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="91" parent="15" name="readed">
+      <DataType>bit(1)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="92" parent="15" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="93" parent="15" name="read_time">
+      <DataType>datetime|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <index id="94" parent="15" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="96" parent="16" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="97" parent="16" name="question_type">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="98" parent="16" name="subject_id">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="99" parent="16" name="score">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="100" parent="16" name="grade_level">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="101" parent="16" name="difficult">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="102" parent="16" name="correct">
+      <DataType>text|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="103" parent="16" name="info_text_content_id">
+      <DataType>int|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="104" parent="16" name="create_user">
+      <DataType>int|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="105" parent="16" name="status">
+      <DataType>int|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="106" parent="16" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="107" parent="16" name="deleted">
+      <DataType>bit(1)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <index id="108" parent="16" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="109" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="110" parent="17" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="111" parent="17" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="112" parent="17" name="level">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="113" parent="17" name="level_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="114" parent="17" name="item_order">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="115" parent="17" name="deleted">
+      <DataType>bit(1)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <index id="116" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="118" parent="18" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="119" parent="18" name="title">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="120" parent="18" name="grade_level">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="121" parent="18" name="frame_text_content_id">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="122" parent="18" name="create_user">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="123" parent="18" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="124" parent="18" name="deleted">
+      <DataType>bit(1)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="125" parent="18" name="create_user_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <index id="126" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="127" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="128" parent="19" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="129" parent="19" name="task_exam_id">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="130" parent="19" name="create_user">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="131" parent="19" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="132" parent="19" name="text_content_id">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="133" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="135" parent="20" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="136" parent="20" name="content">
+      <DataType>text|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="137" parent="20" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <index id="138" parent="20" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="139" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="140" parent="21" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="141" parent="21" name="user_uuid">
+      <DataType>varchar(36)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="142" parent="21" name="user_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="143" parent="21" name="password">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="144" parent="21" name="real_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="145" parent="21" name="age">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="146" parent="21" name="sex">
+      <DataType>int|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="147" parent="21" name="birth_day">
+      <DataType>datetime|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="148" parent="21" name="user_level">
+      <DataType>int|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="149" parent="21" name="phone">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="150" parent="21" name="role">
+      <DataType>int|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="151" parent="21" name="status">
+      <DataType>int|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="152" parent="21" name="image_path">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="153" parent="21" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="154" parent="21" name="modify_time">
+      <DataType>datetime|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="155" parent="21" name="last_active_time">
+      <DataType>datetime|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="156" parent="21" name="deleted">
+      <DataType>bit(1)|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="157" parent="21" name="wx_open_id">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>18</Position>
+    </column>
+    <index id="158" parent="21" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="159" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="160" parent="22" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="161" parent="22" name="user_id">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="162" parent="22" name="user_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="163" parent="22" name="real_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="164" parent="22" name="content">
+      <DataType>text|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="165" parent="22" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <index id="166" parent="22" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="167" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="168" parent="23" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="169" parent="23" name="token">
+      <DataType>varchar(36)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="170" parent="23" name="user_id">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="171" parent="23" name="wx_open_id">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="172" parent="23" name="create_time">
+      <DataType>datetime|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="173" parent="23" name="end_time">
+      <DataType>datetime|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="174" parent="23" name="user_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <index id="175" parent="23" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="176" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

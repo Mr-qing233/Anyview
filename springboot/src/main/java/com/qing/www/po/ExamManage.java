@@ -88,5 +88,9 @@ public class ExamManage implements Serializable {
      */
     private String tips;
 
+    /**
+     * 考试状态(0-未开始;1-进行中;2-已结束)
+     */
+    private Integer state;
 
 }

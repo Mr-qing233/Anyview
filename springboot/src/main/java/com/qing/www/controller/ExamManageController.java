@@ -1,6 +1,11 @@
 package com.qing.www.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qing.www.dao.ExamManageMapper;
+import com.qing.www.service.impl.ExamManageServiceImpl;
+import com.qing.www.util.common.CommonResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
@@ -37,6 +42,14 @@ public class ExamManageController {
     @GetMapping
     public List<ExamManage> findAll() {
         return examManageService.list();
+    }
+
+    @GetMapping("/exams/{page}/{size}")
+    public CommonResult findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+        System.out.println("分页查询所有试卷");
+        Page<ExamManage> examManage = new Page<>(page,size);
+        Page<ExamManage> all = examManageService.page(examManage);
+        return CommonResult.Success(all);
     }
 
     @GetMapping("/{id}")

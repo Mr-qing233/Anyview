@@ -7,17 +7,6 @@
         <li class="search-li"><div class="icon"><input type="text" placeholder="试卷名称" class="search" v-model="key"><i class="el-icon-search"></i></div></li>
         <li><el-button type="primary" @click="search()">搜索试卷</el-button></li>
       </ul>
-      <ul class="paper" v-loading="loading">
-        <li class="item" v-for="(item,index) in pagination.records" :key="index">
-          <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
-          <p class="name">{{item.source}}-{{item.description}}</p>
-          <div class="info">
-            <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">限时{{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
-          </div>
-        </li>
-      </ul>
       <div class="pagination">
         <el-pagination
             @size-change="handleSizeChange"
@@ -29,33 +18,62 @@
             :total="pagination.total">
         </el-pagination>
       </div>
+      <ul class="paper" v-loading="loading">
+        <li class="item" v-for="(item,index) in state.pagination.records" :key="index">
+          <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
+          <p class="name">{{item.source}}-{{item.description}}</p>
+          <div class="info">
+            <i class="el-icon-loading"></i><span>{{item.examDate}}</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">限时{{item.totalTime}}分钟</span>
+            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+          </div>
+        </li>
+      </ul>
+
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {onMounted, reactive, ref} from "vue";
+import {onBeforeMount, onMounted, reactive, ref} from "vue";
 import request from "@/utils/request";
 import router from "@/router";
 
 
-const loading=ref<boolean|null>(false)
-const key=ref<any|null>(null)//搜索关键字
+let loading=ref<boolean|null>(false)
+let key=ref<any|null>(null)//搜索关键字
 let allExam//所有考试信息
-
-let pagination=reactive<any>({
-  countId:<number> 1,
-  current:<number> 1, //当前页
-  total:<number|null> null, //记录条数
-  size:<number> 6 ,//每页条数
+let records=ref<any>([
+  {
+    "examCode": 20190001,
+    "description": "2019年上期期末考试",
+    "source": "计算机网络",
+    "paperId": 1001,
+    "examDate": "2019-03-21",
+    "totalTime": 120,
+    "grade": "2018",
+    "term": "1",
+    "major": "计算机科学与技术",
+    "institute": "软件工程学院",
+    "totalScore": 100,
+    "type": "期末考试",
+    "tips": "快乐千万条，学习第一条，平时不努力，考试两行泪。",
+    "state": 0
+  }
+])
+const pagination=reactive<any>({
+    current:<number> 1, //当前页
+    total:<number|null> null, //记录条数
+    size:<number> 6 ,//每页条数
+    records:[]
 })
-
+const state=reactive({pagination})
 //获取当前所有考试信息
 const getExamInfo=()=>{
-  request.get(`/exam-manage/exams/${pagination.current}/${pagination.size}`).then((res:any)=>{
-      pagination=res.data
+  request.get(`/exam-manage/exams/${state.pagination.current}/${state.pagination.size}`).then((res:any)=>{
+      state.pagination=res.data
       loading.value=false
-      console.log(pagination.records)
+      console.log(state)
     }).catch(error=>{
       console.log(error)
   })
@@ -81,7 +99,7 @@ const handleCurrentChange=(val:any)=> {
 //搜索试卷
 const search=()=> {
   request.get('/exam-manage/exams').then(res => {
-    if(res.data.code == 200) {
+    if(res.data.code == "200") {
       allExam = res.data.data
       let newPage = allExam.filter((item:any) => {
         return item.source.includes(key)
@@ -99,6 +117,9 @@ const toExamMsg=(examCode:any)=> {
 </script>
 
 <style lang="scss" scoped>
+li{
+  list-style-type:none;
+}
 .pagination {
   padding: 20px 0px 30px 0px;
   .el-pagination {

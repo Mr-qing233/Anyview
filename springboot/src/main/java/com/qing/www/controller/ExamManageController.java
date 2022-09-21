@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qing.www.dao.ExamManageMapper;
 import com.qing.www.service.impl.ExamManageServiceImpl;
+import com.qing.www.util.common.CommonEnum;
 import com.qing.www.util.common.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -48,8 +49,18 @@ public class ExamManageController {
     public CommonResult findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
         System.out.println("分页查询所有试卷");
         Page<ExamManage> examManage = new Page<>(page,size);
-        Page<ExamManage> all = examManageService.page(examManage);
+        IPage<ExamManage> all = examManageService.findAll(examManage);
         return CommonResult.Success(all);
+    }
+
+    @GetMapping("/exam/{examCode}")
+    public CommonResult findById(@PathVariable("examCode") Integer examCode){
+        System.out.println("根据ID查找");
+        ExamManage res = examManageService.getById(examCode);
+        if(res == null) {
+            return CommonResult.Error(CommonEnum.EXAM_NOT_FOUND);
+        }
+        return CommonResult.Success(res);
     }
 
     @GetMapping("/{id}")

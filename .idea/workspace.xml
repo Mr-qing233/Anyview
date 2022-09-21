@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[调整数据库]">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/___.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/___.xml" afterDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未完成][分页查询当前考试]">
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/answer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/answerScore.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/exam.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/manager.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/scoreTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/student/startExam.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/MultiQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/MultiQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/PaperManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/PaperManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IExamManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IExamManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +59,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2EXHSZKc3hSpa7VfS38fcwIfS5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -160,6 +171,8 @@
       <workItem from="1663170677592" duration="1984000" />
       <workItem from="1663242121576" duration="3248000" />
       <workItem from="1663254905469" duration="1103000" />
+      <workItem from="1663727573729" duration="4976000" />
+      <workItem from="1663734724286" duration="458000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -238,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663256003328</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[未完成][分页查询当前考试]">
+      <created>1663671684917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671684917</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +298,8 @@
     <MESSAGE value="[未测试][前端未完成][后端已完成]登录逻辑完成[包含判断登录角色]" />
     <MESSAGE value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
     <MESSAGE value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
+    <MESSAGE value="[未完成][分页查询当前考试]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[未完成][分页查询当前考试]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw} from 'vue-router'
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 
 
 // @ts-ignore
@@ -19,7 +19,20 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path:'/student',//学生首页
-    component:()=>import('../components/student/index.vue')
+    component:()=>import('../components/student/index.vue'),
+    children: [
+      {path:"/student/",component: ()=> import('../components/student/exam.vue')},
+      {path:"/student/exam",component: ()=> import('../components/student/exam.vue')},
+      {path:"/student/examMsg",component: ()=> import('../components/student/examMsg.vue')},
+      {path:'/student/startExam', component: () => import('../components/student/startExam.vue')},
+      {path: '/student/manager', component: () => import('../components/student/manager.vue')},
+      {path: '/student/studentScore', component: () => import("../components/student/answerScore.vue")},
+      {path: '/student/scoreTable', component: () => import("../components/student/scoreTable.vue")}
+    ]
+  },
+  {
+    path: '/student/answer',//学生答题界面
+    component: () => import('../components/student/answer.vue')
   },
 ];
 

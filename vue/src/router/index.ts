@@ -15,7 +15,13 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path:'/teacher',//教师首页
-    component:()=>import('../components/teacher/index.vue')
+    component:()=>import('../components/teacher/index.vue'),
+    children:[
+      {
+        path: '/teacher/home', //首页默认路由
+        component: () => import('../components/teacher/home.vue')
+      },
+    ]
   },
   {
     path:'/student',//学生首页

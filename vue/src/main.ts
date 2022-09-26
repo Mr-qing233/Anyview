@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import request from "@/utils/request";
 
+import './assets/css/common.css'
 
 const app=createApp(App).use(router).use(ElementPlus)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

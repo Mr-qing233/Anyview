@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未完成][学生端首页卡片]">
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][学生端首页卡片][未完成][考试详情]">
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/vuex/Demo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/___.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[变更]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/student/exam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/exam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/assets/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TypeScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -69,7 +83,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src/components/teacher&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4eae35f1b35977a00ebd8086c259d4c9&quot;,
@@ -84,6 +98,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Work\workspace\web\Anyview\vue\src" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\teacher" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\student" />
       <recent name="G:\Work\workspace\web\Anyview\vue" />
@@ -159,7 +174,11 @@
       <workItem from="1663254905469" duration="1103000" />
       <workItem from="1663727573729" duration="4976000" />
       <workItem from="1663734724286" duration="2537000" />
-      <workItem from="1663740486037" duration="1801000" />
+      <workItem from="1663740486037" duration="2140000" />
+      <workItem from="1663759877029" duration="470000" />
+      <workItem from="1663844717318" duration="602000" />
+      <workItem from="1663938747736" duration="5393000" />
+      <workItem from="1664001348119" duration="10143000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -252,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663735302130</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[已完成][学生端首页卡片][未完成][考试详情]">
+      <created>1663754337637</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663754337637</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +320,8 @@
     <MESSAGE value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
     <MESSAGE value="[未完成][分页查询当前考试]" />
     <MESSAGE value="[未完成][学生端首页卡片]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[未完成][学生端首页卡片]" />
+    <MESSAGE value="[已完成][学生端首页卡片][未完成][考试详情]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[已完成][学生端首页卡片][未完成][考试详情]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

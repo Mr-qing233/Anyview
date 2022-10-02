@@ -10,20 +10,20 @@ export const store = createStore({
         menu: [{
             index: '1',
             title: '考试管理',
-            icon: 'icon-kechengbiao',
-            content:[{item1:'功能介绍',path:'/examDescription'},{item2:'考试查询',path:'selectExam'},{item3:'添加考试',path:'/addExam'}],
+            icon: 'EditPen',
+            content:[{item1:'考试查询',path:'/teacher/selectExam'},{item2:'添加考试',path:'/teacher/addExam'}],
         },
         {
             index: '2',
             title: '题库管理',
-            icon: 'icon-tiku',
-            content:[{item1:'功能介绍',path:'/answerDescription'},{item2:'所有题库',path:'/selectAnswer'},{item3:'增加题库',path:'/addAnswer'},{path: '/addAnswerChildren'}],
+            icon: 'EditPen',
+            content:[{item1:'所有题库',path:'/teacher/selectAnswer'},{item2:'增加题库',path:'/teacher/addAnswer'},{path: '/teacher/addAnswerChildren'}],
         },
         {
             index: '3',
             title: '成绩查询',
-            icon: 'icon-performance',
-            content:[{item1:'学生成绩查询',path:'/allStudentsGrade'},{path: '/grade'},{item2: '成绩分段查询',path: '/selectExamToPart'},{path: '/scorePart'}],
+            icon: 'EditPen',
+            content:[{item1:'学生成绩查询',path:'/teacher/allStudentsGrade'},{path: '/teacher/grade'},{item2: '成绩分段查询',path: '/teacher/selectExamToPart'},{path: '/teacher/scorePart'}],
         }]
     },
     mutations: {

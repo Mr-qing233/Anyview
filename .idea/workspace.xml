@@ -4,23 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][学生端首页卡片][未完成][考试详情]">
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/vuex/Demo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/___.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[变更]/shelved.patch" beforeDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][教师首页header][未完成][mainLeft]">
+      <change afterPath="$PROJECT_DIR$/vue/src/components/charts/grade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/charts/scorePart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addAnswer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addAnswerChildren.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addExam.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/allStudentsGrade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectAnswer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExamToPart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/mitt/mitt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/assets/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/vuex/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +189,11 @@
       <workItem from="1663844717318" duration="602000" />
       <workItem from="1663938747736" duration="5393000" />
       <workItem from="1664001348119" duration="10143000" />
+      <workItem from="1664197082666" duration="84000" />
+      <workItem from="1664454197195" duration="138000" />
+      <workItem from="1664537787014" duration="5454000" />
+      <workItem from="1664687905542" duration="8029000" />
+      <workItem from="1664700265922" duration="8217000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -278,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663754337637</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[已完成][教师首页header][未完成][mainLeft]">
+      <created>1664197155408</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664197155408</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +343,8 @@
     <MESSAGE value="[未完成][分页查询当前考试]" />
     <MESSAGE value="[未完成][学生端首页卡片]" />
     <MESSAGE value="[已完成][学生端首页卡片][未完成][考试详情]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[已完成][学生端首页卡片][未完成][考试详情]" />
+    <MESSAGE value="[已完成][教师首页header][未完成][mainLeft]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[已完成][教师首页header][未完成][mainLeft]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

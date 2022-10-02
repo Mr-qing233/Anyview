@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import Navigator from './common/Navigator.vue'
+import Navigator from '@/components/teacher/common/Navigator'
 import MainLeft from "@/components/teacher/common/MainLeft.vue";
 import Header1 from "@/components/teacher/common/Header.vue";
 

@@ -73,6 +73,15 @@ public class ExamManageController {
                                 @RequestParam Integer pageSize) {
         return examManageService.page(new Page<>(pageNum, pageSize));
     }
+    @PutMapping("/examUpdate")
+    public CommonResult update(@RequestBody ExamManage exammanage){
+        boolean res = examManageService.saveOrUpdate(exammanage);
+        if (res == false) {
+            return CommonResult.Error(CommonEnum.EXAM_SAVE_OR_UPDATE_ERROR);
+        }
+        System.out.print("更新操作执行---");
+        return CommonResult.Success();
+    }
 
 }
 

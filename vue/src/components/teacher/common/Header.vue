@@ -27,7 +27,6 @@
 </template>
 
 <script lang="ts" setup>
-import {mapState, mapMutations, useStore} from 'vuex'
 import {computed, onMounted, reactive, ref, toRefs} from "vue";
 import router from "@/router";
 import {ElMessage} from "element-plus";
@@ -41,6 +40,7 @@ const showSetting=()=> {
 }
 
 const user = reactive<any>({
+  teacherName:null
 })
 
 const state=reactive({user})
@@ -61,7 +61,7 @@ const toggle =()=> {
 }
 
 const index=()=> {
-  router.push({path: '/teacher'})
+  router.push({path: '/teacher/'})
 }
 
 const exit=()=> {

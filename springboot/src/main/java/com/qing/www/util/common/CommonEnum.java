@@ -19,6 +19,7 @@ public enum CommonEnum implements BaseErrorInfoInterface{
     TOKEN_VALIDATE_ERROR("1501","token验证失败"),
     ERROR_SEARCH_SERVICE("2001","查询业务错误"),
     EXAM_NOT_FOUND("2010","考试编号不存在"),
+    EXAM_SAVE_OR_UPDATE_ERROR("2011","考试数据修改业务失败"),
     EMPTY_EMAIL_PARAMETER("3001","缺少邮箱参数"),
 
     FIND_PASSWORD_CODE_HAS_EXISTED("3103","找回密码邮件验证码已存在,请勿重复发送"),

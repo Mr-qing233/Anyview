@@ -4,33 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][教师首页header][未完成][mainLeft]">
-      <change afterPath="$PROJECT_DIR$/vue/src/components/charts/grade.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/charts/scorePart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addAnswer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addAnswerChildren.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/addExam.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/allStudentsGrade.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectAnswer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExamToPart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/mitt/mitt.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2db79ef5-b037-46b0-b6be-542d4bb2866e.xml" afterDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未完成][考试查看页面]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/MainLeft.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/common/Navigator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/vuex/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/exam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/exam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +187,10 @@
       <workItem from="1664454197195" duration="138000" />
       <workItem from="1664537787014" duration="5454000" />
       <workItem from="1664687905542" duration="8029000" />
-      <workItem from="1664700265922" duration="8217000" />
+      <workItem from="1664700265922" duration="11386000" />
+      <workItem from="1664804722634" duration="8206000" />
+      <workItem from="1664863777574" duration="6628000" />
+      <workItem from="1664952624202" duration="9734000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -300,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664197155408</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="[未完成][考试查看页面]">
+      <created>1664715198419</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664715198419</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +348,8 @@
     <MESSAGE value="[未完成][学生端首页卡片]" />
     <MESSAGE value="[已完成][学生端首页卡片][未完成][考试详情]" />
     <MESSAGE value="[已完成][教师首页header][未完成][mainLeft]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[已完成][教师首页header][未完成][mainLeft]" />
+    <MESSAGE value="[未完成][考试查看页面]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[未完成][考试查看页面]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

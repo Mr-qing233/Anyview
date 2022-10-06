@@ -2,11 +2,11 @@
   <div id="msg">
     <div class="title">
       <span>试卷列表</span>
-      <span>/  {{examData.source}}</span>
+      <span>/{{state.examData.source}}</span>
     </div>
     <div class="wrapper">
       <ul class="top">
-        <li class="example">{{examData.source}}</li>
+        <li class="example">{{state.examData.source}}</li>
         <li><i class="iconfont icon-pen-"></i></li>
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
@@ -17,10 +17,10 @@
         </li>
       </ul>
       <ul class="bottom">
-        <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li>更新于 {{state.examData.startTime}}</li>
+        <li>来自 {{state.examData.institute}}</li>
+        <li class="btn">{{state.examData.type}}</li>
+        <li class="right"><el-button @click="toAnswer(state.examData.examCode)">开始答题</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>考生须知</a></li>
@@ -29,40 +29,40 @@
     <div class="content">
       <el-collapse v-model="activeName" >
         <el-collapse-item class="header" name="0">
-          <template slot="title" class="stitle" >
+          <template #title class="stitle" >
             <div class="title">
-              <span>{{examData.source}}</span><i class="header-icon el-icon-info"></i>
-              <span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>
+              <span>{{state.examData.source}}</span><i class="header-icon el-icon-info"></i>
+              <span class="time">{{score[0]+score[1]+score[2]}}分</span>
               <el-button type="primary" size="small">点击查看试题详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
             <el-collapse-item>
-              <template slot="title" name="1">
+              <template #title name="1">
                 <div class="titlei">选择题 (共{{topicCount[0]}}题 共计{{score[0]}}分)</div>
               </template>
               <div class="contenti">
-                <ul class="question" v-for="(list, index) in topic[1]" :key="index">
+                <ul class="question" v-for="(list, index) in state.topic[1]" :key="index">
                   <li>{{index+1}}. {{list.question}} {{list.score}}分</li>
                 </ul>
               </div>
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title" name="2">
+              <template #title name="2">
                 <div class="titlei">填空题 (共{{topicCount[1]}}题  共计{{score[1]}}分)</div>
               </template>
               <div class="contenti">
-                <ul class="question" v-for="(list, index) in topic[2]" :key="index">
+                <ul class="question" v-for="(list, index) in state.topic[2]" :key="index">
                   <li>{{topicCount[0]+index+1}}.{{list.question}}  {{list.score}}分</li>
                 </ul>
               </div>
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title" name="3">
+              <template #title name="3">
                 <div class="titlei">判断题 (共{{topicCount[2]}}题 共计{{score[2]}}分)</div>
               </template>
               <div class="contenti">
-                <ul class="question" v-for="(list, index) in topic[3]" :key="index">
+                <ul class="question" v-for="(list, index) in state.topic[3]" :key="index">
                   <li>{{topicCount[0]+topicCount[1]+index+1}}. {{list.question}} {{list.score}}分</li>
                 </ul>
               </div>
@@ -77,7 +77,7 @@
         title="考生须知"
         :visible.sync="dialogVisible"
         width="30%">
-      <span>{{examData.tips}}</span>
+      <span>{{state.examData.tips}}</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
       </span>
@@ -102,23 +102,32 @@ const examData=reactive<any|null>({
 })
 const topic=reactive<any|null>({})//试卷信息
 
+const state=reactive<any>({
+  examData,
+  topic
+})
+
+
 const route=useRoute()
 //初始化页面数据
 const init=()=> {
   let examCode = route.query.examCode//获取路由传递过来的试卷编号
   request.get(`/exam-manage/exam/${examCode}`).then(res=>{ //通过examCode请求试卷详细信息
-    examData.value = { ...res.data.data}//扩展运算符拆开数据
-    let paperId = examData.paperId
-    topic.value = {...res.data}
-    let keys = Object.keys(topic) //对象转数组
-    keys.forEach(e=>{//遍历
-      let data=topic[e]
-      topicCount.push(data.length)
-      let currentScore = 0
-      for(let i = 0; i< data.length; i++) { //循环每种题型,计算出总分
-        currentScore += data[i].score
-      }
-      score.push(currentScore)//把每种题型总分存入score
+    state.examData = { ...res.data}//扩展运算符拆开数据
+    let paperId = state.examData.paperId
+    request.get(`/paper-manage/paper/${paperId}`).then((res:any)=>{//通过paperId获取题目信息
+      state.topic = {...res}
+      let keys = Object.keys(state.topic) //对象转数组
+      keys.forEach(e=>{//遍历
+        let data=state.topic[e]
+        topicCount.push(data.length)
+        let currentScore = 0
+        for(let i = 0; i< data.length; i++) { //循环每种题型,计算出总分
+          currentScore += data[i].score
+        }
+        score.push(currentScore)//把每种题型总分存入score
+        console.log(currentScore)
+      })
     })
   })
 }

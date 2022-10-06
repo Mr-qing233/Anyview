@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qing.www.po.ExamManage;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -22,4 +23,5 @@ public interface ExamManageMapper extends BaseMapper<ExamManage> {
 
     @Select("select * from exam_manage")
     IPage<ExamManage> findAll(Page page);
+
 }

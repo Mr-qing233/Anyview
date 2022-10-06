@@ -23,8 +23,8 @@
           <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
           <p class="name">{{item.source}}-{{item.description}}</p>
           <div class="info">
-            <i class="el-icon-loading"></i><span>{{item.examDate}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">限时{{item.totalTime}}分钟</span>
+            <i class="el-icon-loading"></i><span>开始于{{item.startTime}}<br/></span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.endTime != null">结束于{{item.endTime}}<br/></span>
             <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
           </div>
         </li>
@@ -43,24 +43,7 @@ import router from "@/router";
 let loading=ref<boolean|null>(false)
 let key=ref<any|null>(null)//搜索关键字
 let allExam//所有考试信息
-let records=ref<any>([
-  {
-    "examCode": 20190001,
-    "description": "2019年上期期末考试",
-    "source": "计算机网络",
-    "paperId": 1001,
-    "examDate": "2019-03-21",
-    "totalTime": 120,
-    "grade": "2018",
-    "term": "1",
-    "major": "计算机科学与技术",
-    "institute": "软件工程学院",
-    "totalScore": 100,
-    "type": "期末考试",
-    "tips": "快乐千万条，学习第一条，平时不努力，考试两行泪。",
-    "state": 0
-  }
-])
+
 const pagination=reactive<any>({
     current:<number> 1, //当前页
     total:<number|null> null, //记录条数

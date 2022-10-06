@@ -36,4 +36,5 @@ public class ExamManageServiceImpl extends ServiceImpl<ExamManageMapper, ExamMan
     public IPage<ExamManage> findAll(Page<ExamManage> page) {
         return examManageMapper.findAll(page);
     }
+
 }

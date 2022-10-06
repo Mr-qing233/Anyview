@@ -1,10 +1,13 @@
 package com.qing.www.po;
 
+import cn.hutool.core.date.DateTime;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.sql.Timestamp;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -46,16 +49,16 @@ public class ExamManage implements Serializable {
     private Integer paperId;
 
     /**
-     * 考试日期
+     * 起始时间
      */
-    @TableField(value = "examDate")
-    private String examDate;
+    @TableField(value = "startTime")
+    private String startTime;
 
     /**
-     * 持续时长
+     * 结束时间
      */
-    @TableField(value = "totalTime")
-    private Integer totalTime;
+    @TableField(value = "endTime")
+    private String endTime;
 
     /**
      * 年级

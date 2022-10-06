@@ -1,6 +1,7 @@
 package com.qing.www.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import lombok.Getter;
@@ -29,11 +30,13 @@ public class Score implements Serializable {
     /**
      * 考试编号
      */
+    @TableField(value = "examCode")
     private Integer examCode;
 
     /**
      * 学号
      */
+    @TableField(value = "studentId")
     private Integer studentId;
 
     /**
@@ -44,11 +47,13 @@ public class Score implements Serializable {
     /**
      * 平时成绩
      */
+    @TableField(value = "ptScore")
     private Integer ptScore;
 
     /**
      * 期末成绩
      */
+    @TableField(value = "etScore")
     private Integer etScore;
 
     /**
@@ -59,6 +64,7 @@ public class Score implements Serializable {
     /**
      * 答题日期
      */
+    @TableField(value = "answerDate")
     private String answerDate;
 
 

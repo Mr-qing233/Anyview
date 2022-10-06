@@ -1,9 +1,13 @@
 package com.qing.www.po;
 
+import cn.hutool.core.date.DateTime;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.sql.Timestamp;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -41,17 +45,20 @@ public class ExamManage implements Serializable {
     /**
      * 试卷编号
      */
+    @TableField(value = "paperId")
     private Integer paperId;
 
     /**
-     * 考试日期
+     * 起始时间
      */
-    private String examDate;
+    @TableField(value = "startTime")
+    private String startTime;
 
     /**
-     * 持续时长
+     * 结束时间
      */
-    private Integer totalTime;
+    @TableField(value = "endTime")
+    private String endTime;
 
     /**
      * 年级
@@ -76,6 +83,7 @@ public class ExamManage implements Serializable {
     /**
      * 总分
      */
+    @TableField(value = "totalScore")
     private Integer totalScore;
 
     /**
@@ -88,5 +96,9 @@ public class ExamManage implements Serializable {
      */
     private String tips;
 
+    /**
+     * 考试状态(0-未开始;1-进行中;2-已结束)
+     */
+    private Integer state;
 
 }

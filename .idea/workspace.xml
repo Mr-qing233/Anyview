@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成">
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未完成][考试查看页面]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/PaperManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/ExamManageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/FillQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/JudgeQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/MultiQuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/ExamManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IFillQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IJudgeQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/IMultiQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/ExamManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/FillQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/JudgeQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/MultiQuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/exam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/exam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/selectExam.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +34,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TypeScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -32,6 +50,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +63,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2EXHSZKc3hSpa7VfS38fcwIfS5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -65,7 +87,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src/components/teacher&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4eae35f1b35977a00ebd8086c259d4c9&quot;,
@@ -80,6 +102,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Work\workspace\web\Anyview\vue\src" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\teacher" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\student" />
       <recent name="G:\Work\workspace\web\Anyview\vue" />
@@ -152,7 +175,22 @@
       <workItem from="1663158482197" duration="4242000" />
       <workItem from="1663170677592" duration="1984000" />
       <workItem from="1663242121576" duration="3248000" />
-      <workItem from="1663254905469" duration="1050000" />
+      <workItem from="1663254905469" duration="1103000" />
+      <workItem from="1663727573729" duration="4976000" />
+      <workItem from="1663734724286" duration="2537000" />
+      <workItem from="1663740486037" duration="2140000" />
+      <workItem from="1663759877029" duration="470000" />
+      <workItem from="1663844717318" duration="602000" />
+      <workItem from="1663938747736" duration="5393000" />
+      <workItem from="1664001348119" duration="10143000" />
+      <workItem from="1664197082666" duration="84000" />
+      <workItem from="1664454197195" duration="138000" />
+      <workItem from="1664537787014" duration="5454000" />
+      <workItem from="1664687905542" duration="8029000" />
+      <workItem from="1664700265922" duration="11386000" />
+      <workItem from="1664804722634" duration="8206000" />
+      <workItem from="1664863777574" duration="6628000" />
+      <workItem from="1664952624202" duration="9734000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -224,7 +262,49 @@
       <option name="project" value="LOCAL" />
       <updated>1663245835127</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[登录逻辑][已测试][前端已完成][已测试][后端已完成]">
+      <created>1663256003328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663256003328</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[未完成][分页查询当前考试]">
+      <created>1663671684917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671684917</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[未完成][学生端首页卡片]">
+      <created>1663735302130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663735302130</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[已完成][学生端首页卡片][未完成][考试详情]">
+      <created>1663754337637</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663754337637</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[已完成][教师首页header][未完成][mainLeft]">
+      <created>1664197155408</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664197155408</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[未完成][考试查看页面]">
+      <created>1664715198419</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664715198419</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +321,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -263,7 +343,13 @@
     <MESSAGE value="登录相关数据库基本操作" />
     <MESSAGE value="[未测试][前端未完成][后端已完成]登录逻辑完成[包含判断登录角色]" />
     <MESSAGE value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="[未测试][前端未完成][已测试][后端已完成]登录逻辑完成" />
+    <MESSAGE value="[登录逻辑][已测试][前端已完成][已测试][后端已完成]" />
+    <MESSAGE value="[未完成][分页查询当前考试]" />
+    <MESSAGE value="[未完成][学生端首页卡片]" />
+    <MESSAGE value="[已完成][学生端首页卡片][未完成][考试详情]" />
+    <MESSAGE value="[已完成][教师首页header][未完成][mainLeft]" />
+    <MESSAGE value="[未完成][考试查看页面]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[未完成][考试查看页面]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

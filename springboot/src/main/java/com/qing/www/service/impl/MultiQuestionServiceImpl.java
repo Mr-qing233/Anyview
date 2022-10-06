@@ -6,6 +6,9 @@ import com.qing.www.service.IMultiQuestionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
  * 选择题题库表 服务实现类
@@ -16,5 +19,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MultiQuestionServiceImpl extends ServiceImpl<MultiQuestionMapper, MultiQuestion> implements IMultiQuestionService {
-
+    @Resource
+    private MultiQuestionMapper multiQuestionMapper;
+    @Override
+    public List<MultiQuestion> findByIdAndType(Integer PaperId) {
+        return multiQuestionMapper.findByIdAndType(PaperId);
+    }
 }

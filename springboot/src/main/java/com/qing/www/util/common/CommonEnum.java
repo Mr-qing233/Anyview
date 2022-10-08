@@ -21,6 +21,7 @@ public enum CommonEnum implements BaseErrorInfoInterface{
     EXAM_NOT_FOUND("2010","考试编号不存在"),
     EXAM_UPDATE_ERROR("2011","考试数据修改业务失败"),
     EXAM_DELETE_ERROR("2012","考试数据删除业务失败"),
+    SCORE_ADD_FAILED("2020","考试分数添加失败"),
     EMPTY_EMAIL_PARAMETER("3001","缺少邮箱参数"),
 
     FIND_PASSWORD_CODE_HAS_EXISTED("3103","找回密码邮件验证码已存在,请勿重复发送"),

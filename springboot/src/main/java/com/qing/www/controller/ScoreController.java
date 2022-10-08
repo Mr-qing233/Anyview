@@ -1,6 +1,8 @@
 package com.qing.www.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qing.www.util.common.CommonEnum;
+import com.qing.www.util.common.CommonResult;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
@@ -48,6 +50,16 @@ public class ScoreController {
     public Page<Score> findPage(@RequestParam Integer pageNum,
                                 @RequestParam Integer pageSize) {
         return scoreService.page(new Page<>(pageNum, pageSize));
+    }
+
+    @PostMapping("/add")
+    public CommonResult add(@RequestBody Score score) {
+        boolean result = scoreService.save(score);
+        if (result == false) {
+            return CommonResult.Error(CommonEnum.SCORE_ADD_FAILED);
+        }else {
+            return CommonResult.Success();
+        }
     }
 
 }

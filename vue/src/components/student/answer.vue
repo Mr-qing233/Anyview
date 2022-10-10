@@ -45,7 +45,7 @@
                 <li v-for="(list, index1) in state.topic[1]" :key="index1">
                   <a href="javascript:;"
                      @click="change(index1)"
-                     :class="{'border': index === index1 && state.currentType === 1,'bg': bg_flag && state.topic[1][index1].isClick === true}">
+                     :class="{'border': index === index1 && state.currentType === 1,'bg': state.topic[1][index1].isClick === true}">
                     <span :class="{'mark': state.topic[1][index1].isMark === true}"></span>
                     {{index1+1}}
                   </a>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="fill" v-if="state.currentType === 2">
-              <div v-for="(item,currentIndex) in part" :key="currentIndex">
+              <div v-for="(item,currentIndex) in state.part" :key="currentIndex">
                 <el-input placeholder="请填在此处"
                           v-model="state.fillAnswer[index][currentIndex]"
                           clearable
@@ -124,18 +124,18 @@
               </el-radio-group>
               <div class="analysis" v-if="isPractice">
                 <ul>
-                  <li> <el-tag type="success">正确姿势：</el-tag><span class="right">{{topic[3][index].answer}}</span></li>
+                  <li> <el-tag type="success">正确姿势：</el-tag><span class="right">{{state.topic[3][index].answer}}</span></li>
                   <li><el-tag>题目解析：</el-tag></li>
-                  <li>{{topic[3][index].analysis == null ? '暂无解析': topic[3][index].analysis}}</li>
+                  <li>{{state.topic[3][index].analysis == null ? '暂无解析': topic[3][index].analysis}}</li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="operation">
             <ul class="end">
-              <li @click="previous()"><i class="iconfont icon-previous"></i><span>上一题</span></li>
-              <li @click="mark()"><i class="iconfont icon-mark-o"></i><span>标记</span></li>
-              <li @click="next()"><span>下一题</span><i class="iconfont icon-next"></i></li>
+              <li @click="previous()"><span>上一题</span></li>
+              <li @click="mark()"><span>标记</span></li>
+              <li @click="next()"><span>下一题</span></li>
             </ul>
           </div>
         </div>
@@ -206,7 +206,7 @@ let isFillClick=ref<any>(false) //选择题是否点击标识符
 let currentType=ref<any>(1)//当前题型类型  1--选择题  2--填空题  3--判断题
 let title=ref<any>("请选择正确的选项")
 let rightAnswer=ref<any>('')
-
+let part=ref<any>(null)//填空题的空格数量
 
 const state=reactive({
   user,
@@ -222,6 +222,7 @@ const state=reactive({
   currentType,
   title,
   index,
+  part,
 })
 
 
@@ -313,7 +314,7 @@ const fillBG=()=> { //填空题已答题目 如果已答该题目,设置第四�
   }
 }
 
-let part=ref<any>(null)//填空题的空格数量
+
 const fill=(index2:any)=>{ //填空题
   let len = state.topic[2].length
   state.currentType = 2
@@ -329,7 +330,7 @@ const fill=(index2:any)=>{ //填空题
       let Data = state.topic[2]
       console.log(Data)
       state.showQuestion = Data[state.index].question //获取题目信息
-      part= state.showQuestion.split("()").length -1 //根据题目中括号的数量确定填空横线数量
+      state.part= state.showQuestion.split("()").length -1 //根据题目中括号的数量确定填空横线数量
       state.number = topicCount[0] + state.index + 1
     }
   }else if(state.index >= len) {

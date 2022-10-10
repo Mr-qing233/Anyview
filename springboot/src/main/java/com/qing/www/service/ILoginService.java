@@ -10,4 +10,5 @@ public interface ILoginService extends IService<LoginDto> {
     public Admin adminLogin(LoginDto loginDto);
     public Teacher teacherLogin(LoginDto loginDto);
     public Student studentLogin(LoginDto loginDto);
+
 }

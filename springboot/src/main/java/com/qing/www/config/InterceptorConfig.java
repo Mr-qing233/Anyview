@@ -1,6 +1,6 @@
-package com.qing.www.controller.config;
+package com.qing.www.config;
 
-import com.qing.www.controller.config.interceptor.JwtInterceptor;
+import com.qing.www.config.interceptor.JwtInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

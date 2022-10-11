@@ -1,4 +1,4 @@
-package com.qing.www.controller.config.interceptor;
+package com.qing.www.config.interceptor;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.jwt.JWTException;

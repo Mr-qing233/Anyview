@@ -15,6 +15,8 @@ public enum CommonEnum implements BaseErrorInfoInterface{
     USER_MESSAGE_NOT_ENOUGH("1005","用户参数不足"),
     USER_HAS_BEEN_BANNED("1006","用户已被锁定"),
     USER_CANCELLED("1007","用户已注销"),
+    ERROR_SEND_MESSAGE_TO_ALL("1100","发送全体消息失败"),
+    ERROR_SEND_MESSAGE("1101","单独发送消息失败"),
     TOKEN_NOT_FOUND("1500","token不存在,请重新登录"),
     TOKEN_VALIDATE_ERROR("1501","token验证失败"),
     ERROR_SEARCH_SERVICE("2001","查询业务错误"),

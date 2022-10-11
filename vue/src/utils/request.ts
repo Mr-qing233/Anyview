@@ -1,3 +1,7 @@
+/**
+ * 封装request方法
+ */
+
 import { Message } from '@element-plus/icons-vue';
 import axios from 'axios'
 import { ElMessage } from 'element-plus';

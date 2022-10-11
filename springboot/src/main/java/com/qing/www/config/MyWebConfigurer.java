@@ -1,4 +1,4 @@
-package com.qing.www.controller.config;
+package com.qing.www.config;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

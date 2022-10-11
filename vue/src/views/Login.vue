@@ -45,6 +45,7 @@ const login =()=>{
       request.post('/user/login',user).then((res: any)=>{
         if(res.code=='200'){
           localStorage.setItem("user",JSON.stringify(res.data))//存储用户信息到浏览器
+          sessionStorage.setItem("user",JSON.stringify(res.data))//存储session
           let resData=res.data
           switch (resData.permission.valueOf()){
             case 0://管理员

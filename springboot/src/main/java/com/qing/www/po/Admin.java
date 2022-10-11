@@ -39,7 +39,7 @@ public class Admin implements Serializable {
      * 账号
      */
     @TableField(value = "cardId")
-    private Integer cardId;
+    private String cardId;
 
     /**
      * 密码

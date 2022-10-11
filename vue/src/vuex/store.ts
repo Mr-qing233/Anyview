@@ -4,7 +4,7 @@ import App from "@/App.vue";
 
 export const store = createStore({
     state:{
-        sPractice: false, //练习模式标志
+        isPractice: false, //练习模式标志
         flag: false, //菜单栏左右滑动标志
         userInfo: null,
         menu: [{

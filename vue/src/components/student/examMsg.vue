@@ -136,7 +136,7 @@ onMounted(()=>{
 })
 
 const toAnswer=(id: any)=> {
-  router.push({path:"/answer",query:{examCode: id}})
+  router.push({path:"/student/answer",query:{examCode: id}})
 }
 
 </script>

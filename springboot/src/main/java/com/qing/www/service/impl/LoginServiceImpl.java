@@ -46,7 +46,7 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, LoginDto> impleme
         }
         if(one != null){//如果查询有结果
             //设置token
-            String token = TokenUtils.generateToken(one.getAdminId().toString(), one.getPwd());
+            String token = TokenUtils.generateToken(one.getCardId().toString(), one.getPwd());
             one.setToken(token);
             return one;//返回查询信息，登录成功
 
@@ -70,7 +70,7 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, LoginDto> impleme
         }
         if(one != null){//如果查询有结果
             //设置token
-            String token = TokenUtils.generateToken(one.getTeacherId().toString(), one.getPwd());
+            String token = TokenUtils.generateToken(one.getCardId().toString(), one.getPwd());
             one.setToken(token);
             return one;//返回查询信息，登录成功
 
@@ -94,7 +94,7 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, LoginDto> impleme
         }
         if(one != null){//如果查询有结果
             //设置token
-            String token = TokenUtils.generateToken(one.getStudentId().toString(), one.getPwd());
+            String token = TokenUtils.generateToken(one.getCardId().toString(), one.getPwd());
             one.setToken(token);
             return one;//返回查询信息，登录成功
 

@@ -1,9 +1,13 @@
+/**
+ * 封装request方法
+ */
+
 import { Message } from '@element-plus/icons-vue';
 import axios from 'axios'
 import { ElMessage } from 'element-plus';
 
 const request = axios.create({
-    baseURL: 'http://localhost:8081',
+    baseURL: 'http://192.168.101.145:8081',
     timeout: 5000
 })
 

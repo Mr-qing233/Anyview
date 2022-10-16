@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[未完成][前端][websocket封装]&#10;[已完成][后端][websocket基础实现]">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_7_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/utils/socket.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][前后端][websocket封装以及基础操作]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/InterceptorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MyWebConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/MyWebConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/config/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/interceptor/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/utils/request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/interceptor/JwtInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/utils/socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/utils/socket.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +185,10 @@
       <workItem from="1665232670248" duration="5543000" />
       <workItem from="1665314536923" duration="2283000" />
       <workItem from="1665406810720" duration="10911000" />
-      <workItem from="1665483801340" duration="10285000" />
+      <workItem from="1665483801340" duration="10863000" />
+      <workItem from="1665571118407" duration="2213000" />
+      <workItem from="1665835258182" duration="8750000" />
+      <workItem from="1665851109401" duration="8962000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -328,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665420027264</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="[未完成][前端][websocket封装]&#10;[已完成][后端][websocket基础实现]">
+      <created>1665500319539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1665500319539</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +379,8 @@
     <MESSAGE value="[未完成][学生端][答题页面]" />
     <MESSAGE value="[已完成][全局][token校验]" />
     <MESSAGE value="[未完成][前端][websocket封装]&#10;[已完成][后端][websocket基础实现]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[未完成][前端][websocket封装]&#10;[已完成][后端][websocket基础实现]" />
+    <MESSAGE value="[已完成][前后端][websocket封装以及基础操作]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[已完成][前后端][websocket封装以及基础操作]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -4,6 +4,7 @@
       <span>很高兴遇见你,{{state.user.teacherName}}老师。</span>
     </div>
     <div class="msg">
+      <el-button @click="sendData">点击发送</el-button>
       <p class="title">教务公告：</p>
       <ul>
         <li @click="centerDialogVisible = true" >放假通知</li>
@@ -29,21 +30,46 @@
 </template>
 
 <script lang="ts" setup>
-import {onMounted, reactive, ref} from "vue";
+import {onMounted, onUnmounted, reactive, ref} from "vue";
+import socket from "@/utils/socket";
+import SocketService from "@/utils/socket";
+import {io} from "socket.io-client";
+
 
 const centerDialogVisible = ref(false)
 const user = reactive<any>({
 })
 
-const state=reactive({user})
+const state=reactive({
+  user
+})
 
 const getUserInfo=()=>{
   state.user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")||'0') : null
   console.log(state.user)
 }
 
+
+
+const sendData = () =>{
+  const message = "START"
+  console.log(message)
+  socket.send(message)
+  console.log("发送完成")
+}
+
+const receiveMessage=(message: any)=> {
+  let msg = message.data
+  console.log(msg)
+}
+
+
 onMounted(()=>{
+  socket.init(receiveMessage)
   getUserInfo()
+})
+onUnmounted(()=>{
+  socket.close()
 })
 </script>
 

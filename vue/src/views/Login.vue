@@ -23,6 +23,7 @@ import {ElMessage} from 'element-plus';
 import {ref, reactive, getCurrentInstance, onMounted} from 'vue'
 import request from "@/utils/request";
 import router from '@/router';
+import {store} from "@/vuex/store";
 const rules = reactive({
   cardId: [
     { required: true, message: '请输入用户名', trigger: 'blur' }
@@ -46,6 +47,7 @@ const login =()=>{
         if(res.code=='200'){
           localStorage.setItem("user",JSON.stringify(res.data))//存储用户信息到浏览器
           sessionStorage.setItem("user",JSON.stringify(res.data))//存储session
+          store.state.userInfo = res.data
           let resData=res.data
           switch (resData.permission.valueOf()){
             case 0://管理员

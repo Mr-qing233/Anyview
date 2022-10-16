@@ -57,7 +57,7 @@ public class JwtInterceptor implements HandlerInterceptor {
         int length = cardId.length();
 
         switch (length){
-            case 4:
+            case '4':
                 QueryWrapper<Admin> adminQueryWrapper = new QueryWrapper<>();
                 adminQueryWrapper.eq("cardId",cardId);
                 Admin admin = adminService.getOne(adminQueryWrapper);
@@ -71,7 +71,7 @@ public class JwtInterceptor implements HandlerInterceptor {
                 }catch (JWTVerificationException e){
                     throw new ServiceException(CommonEnum.TOKEN_VALIDATE_ERROR);
                 }
-            case 6:
+            case '6':
                 QueryWrapper<Teacher> teacherQueryWrapper = new QueryWrapper<>();
                 teacherQueryWrapper.eq("cardId",cardId);
                 Teacher teacher = teacherService.getOne(teacherQueryWrapper);
@@ -85,7 +85,7 @@ public class JwtInterceptor implements HandlerInterceptor {
                 }catch (JWTVerificationException e) {
                     throw new ServiceException(CommonEnum.TOKEN_VALIDATE_ERROR);
                 }
-            case 8:
+            case '8':
                 QueryWrapper<Student> studentQueryWrapper = new QueryWrapper<>();
                 studentQueryWrapper.eq("cardId",cardId);
                 Student student = studentService.getOne(studentQueryWrapper);

@@ -1,8 +1,11 @@
 package com.qing.www.controller;
 
+import cn.hutool.json.JSON;
+import cn.hutool.json.JSONParser;
 import com.qing.www.util.common.CommonEnum;
 import com.qing.www.util.common.CommonResult;
 import com.qing.www.util.exception.ServiceException;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -42,7 +45,7 @@ public class ClientWebSocket {
         this.session = session;
         webSocketClientMap.add(this);
         addOnlineCount();
-        logger.info(session.getId()+"加入连接,当前在线:"+webSocketClientMap.size());
+        logger.info("session连接id:"+session.getId()+"加入连接,当前在线:"+webSocketClientMap.size());
     }
 
     /**

@@ -11,8 +11,7 @@ import { ElMessage } from 'element-plus'
 import {store} from "@/vuex/store";
 
 
-const user = sessionStorage.getItem("user") ? JSON.parse(sessionStorage.getItem("user")||'0') : null // 获取验证信息，后台配置
-const cardId = user.cardId
+
 interface socket {
     websocket: any
     connectURL: string
@@ -25,6 +24,7 @@ interface socket {
     reconnect_number: number
     reconnect_timer: any
     reconnect_interval: number
+    cardId: any,
     init: (receiveMessage: Function | null) => any
     receive: (message: any) => void
     heartbeat: () => void
@@ -35,7 +35,7 @@ interface socket {
 
 const socket: socket = {
     websocket: null,
-    connectURL: `ws://192.168.101.145:8081/client/${cardId}`,
+    connectURL: 'ws://192.168.101.145:8081/client/',
     // 开启标识
     socket_open: false,
     // 心跳timer
@@ -50,6 +50,7 @@ const socket: socket = {
     reconnect_current: 1,
     // 网络错误提示此时
     reconnect_number: 0,
+    cardId: null,
     // 重连timer
     reconnect_timer: null,
     // 重连频率
@@ -65,7 +66,7 @@ const socket: socket = {
         //   return socket.websocket
         // }
 
-        socket.websocket = new WebSocket(socket.connectURL)
+        socket.websocket = new WebSocket(socket.connectURL+socket.cardId)
         socket.websocket.onmessage = (e: any) => {
             if (receiveMessage) {
                 receiveMessage(e)
@@ -95,6 +96,7 @@ const socket: socket = {
 
         // 连接成功
         socket.websocket.onopen = function() {
+            console.log("WebSocket开启成功")
             socket.socket_open = true
             socket.is_reconnect = true
             // 开启心跳

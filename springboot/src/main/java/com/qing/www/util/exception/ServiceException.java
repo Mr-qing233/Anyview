@@ -1,6 +1,6 @@
 package com.qing.www.util.exception;
 
-import com.qing.www.util.common.CommonEnum;
+import com.qing.www.dto.common.CommonEnum;
 import lombok.Getter;
 
 /**

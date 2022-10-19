@@ -1,21 +1,12 @@
 package com.qing.www.controller;
 
-import cn.hutool.Hutool;
-import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.qing.www.dao.ExamManageMapper;
-import com.qing.www.service.impl.ExamManageServiceImpl;
-import com.qing.www.util.common.CommonEnum;
-import com.qing.www.util.common.CommonResult;
-import com.qing.www.util.exception.ServiceException;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.qing.www.dto.common.CommonEnum;
+import com.qing.www.dto.common.CommonResult;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
-import java.sql.Wrapper;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import com.qing.www.service.IExamManageService;

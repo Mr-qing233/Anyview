@@ -36,7 +36,8 @@ export const store = createStore({
         },
         changeUserInfo(state:any,info:any) {
             state.userInfo = info
-        }
+        },
+
     },
     actions:{
         getUserInfo(context:any,info:any) {

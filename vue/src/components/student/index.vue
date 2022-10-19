@@ -22,12 +22,14 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+import socket from "@/utils/socket";
 
 const activeIndex = ref('1')
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
+
 </script>
 
 <style scoped>

@@ -20,7 +20,7 @@
         <li>更新于 {{state.examData.startTime}}</li>
         <li>来自 {{state.examData.institute}}</li>
         <li class="btn">{{state.examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(state.examData.examCode)">开始答题</el-button></li>
+        <el-button class="right" @click="toAnswer(state.examData.examCode)" :disabled="state.examData.state!==1" :type="state.examData.state!==1 ? 'danger':'primary'">开始答题</el-button>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>考生须知</a></li>

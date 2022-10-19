@@ -4,6 +4,9 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootConfiguration
 public class MyWebConfigurer implements WebMvcConfigurer {
     @Override
@@ -14,7 +17,7 @@ public class MyWebConfigurer implements WebMvcConfigurer {
          */
         corsRegistry.addMapping("/**")
                 .allowCredentials(true)
-                .allowedOrigins("http://localhost:8080","http://192.168.101.145:8080")
+                .allowedOriginPatterns("*")
                 .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")
                 .allowedHeaders("*")
                 .maxAge(3600);

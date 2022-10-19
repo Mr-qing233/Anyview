@@ -1,4 +1,4 @@
-package com.qing.www.po.dto;
+package com.qing.www.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

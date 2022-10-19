@@ -20,10 +20,11 @@
 
 <script lang="ts" setup>
 import {ElMessage} from 'element-plus';
-import {ref, reactive, getCurrentInstance, onMounted} from 'vue'
+import {ref, reactive, getCurrentInstance, onMounted, onBeforeUnmount, onUnmounted} from 'vue'
 import request from "@/utils/request";
 import router from '@/router';
 import {store} from "@/vuex/store";
+import socket from "@/utils/socket";
 const rules = reactive({
   cardId: [
     { required: true, message: '请输入用户名', trigger: 'blur' }
@@ -40,6 +41,9 @@ const user = reactive({
 
 const loginForm =ref<any|null>(null)
 
+
+
+
 const login =()=>{
   loginForm.value.validate((valid:any)=>{
     if(valid){
@@ -49,6 +53,8 @@ const login =()=>{
           sessionStorage.setItem("user",JSON.stringify(res.data))//存储session
           store.state.userInfo = res.data
           let resData=res.data
+          socket.cardId = resData.cardId
+          socket.init(receiveMessage)
           switch (resData.permission.valueOf()){
             case 0://管理员
               router.push("/admin")
@@ -70,6 +76,15 @@ const login =()=>{
     }
   })
 }
+
+const receiveMessage=(message: any)=> {
+  let msg = message.data
+  console.log(msg)
+}
+
+onUnmounted(()=>{
+
+})
 </script>
 
 

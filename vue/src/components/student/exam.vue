@@ -23,9 +23,13 @@
           <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
           <p class="name">{{item.source}}-{{item.description}}</p>
           <div class="info">
-            <i class="el-icon-loading"></i><span>开始于{{item.startTime}}<br/></span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.endTime != null">结束于{{item.endTime}}<br/></span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <span v-if="item.state === -1" style="color: green"><el-icon class="is-loading" style="color: green"><Loading /></el-icon>准备中<br/></span>
+            <span v-if="item.state === 0" style="color: #873800"><el-icon style="color: #873800"><Lock /></el-icon>未开始<br/></span>
+            <span v-if="item.state === 1" style="color: #1890ff"><el-icon style="color: #1890ff"><Unlock /></el-icon>进行中<br/></span>
+            <span v-if="item.state === 2" style="color: red"><el-icon style="color: red"><CircleClose /></el-icon>已结束<br/></span>
+            <span><el-icon class="is-loading"><Loading /></el-icon>开始于{{item.startTime}}<br/></span>
+            <span v-if="item.endTime != null"><el-icon><Timer /></el-icon>结束于{{item.endTime}}<br/></span>
+            <span><i class="iconfont icon-fenshu"></i>满分{{item.totalScore}}分</span>
           </div>
         </li>
       </ul>
@@ -213,5 +217,9 @@ li{
 }
 #myExam .wrapper {
   background-color: #fff;
+}
+.el-icon{
+  height: 0px;
+  margin: 10px;
 }
 </style>

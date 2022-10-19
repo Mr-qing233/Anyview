@@ -1,6 +1,6 @@
 package com.qing.www.util.exception;
 
-import com.qing.www.util.common.CommonResult;
+import com.qing.www.dto.common.CommonResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

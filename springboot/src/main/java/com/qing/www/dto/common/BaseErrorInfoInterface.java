@@ -1,4 +1,4 @@
-package com.qing.www.util.common;
+package com.qing.www.dto.common;
 
 /**
  * 接口用于枚举返回码

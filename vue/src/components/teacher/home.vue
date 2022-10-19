@@ -34,6 +34,7 @@ import {onMounted, onUnmounted, reactive, ref} from "vue";
 import socket from "@/utils/socket";
 import SocketService from "@/utils/socket";
 import {io} from "socket.io-client";
+import {store} from "@/vuex/store";
 
 
 const centerDialogVisible = ref(false)
@@ -52,25 +53,11 @@ const getUserInfo=()=>{
 
 
 const sendData = () =>{
-  const message = "START"
+  const message = "send message"
   console.log(message)
   socket.send(message)
   console.log("发送完成")
 }
-
-const receiveMessage=(message: any)=> {
-  let msg = message.data
-  console.log(msg)
-}
-
-
-onMounted(()=>{
-  socket.init(receiveMessage)
-  getUserInfo()
-})
-onUnmounted(()=>{
-  socket.close()
-})
 </script>
 
 <style lang="less" scoped>

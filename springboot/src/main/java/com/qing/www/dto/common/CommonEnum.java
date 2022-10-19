@@ -1,4 +1,4 @@
-package com.qing.www.util.common;
+package com.qing.www.dto.common;
 
 /**
  * 返回码枚举类
@@ -17,6 +17,7 @@ public enum CommonEnum implements BaseErrorInfoInterface{
     USER_CANCELLED("1007","用户已注销"),
     ERROR_SEND_MESSAGE_TO_ALL("1100","发送全体消息失败"),
     ERROR_SEND_MESSAGE("1101","单独发送消息失败"),
+    ERROR_SEND_OBJECT("1102","单独发送对象失败"),
     TOKEN_NOT_FOUND("1500","token不存在,请重新登录"),
     TOKEN_VALIDATE_ERROR("1501","token验证失败"),
     ERROR_SEARCH_SERVICE("2001","查询业务错误"),
@@ -28,7 +29,9 @@ public enum CommonEnum implements BaseErrorInfoInterface{
 
     FIND_PASSWORD_CODE_HAS_EXISTED("3103","找回密码邮件验证码已存在,请勿重复发送"),
     CODE_ERROR("3104","验证码错误请点击按钮重新发送"),
-    DATETIME_FORMAT_ERROR("4000","时间字符串格式错误");
+    DATETIME_FORMAT_ERROR("4000","时间字符串格式错误"),
+    ENCODER_ERROR("5000","WebSocket编码器错误"),
+    WEBSOCKET_CLIENT_ERROR("5001","WebSocket建立连接失败");
 
     /**
      * 错误码

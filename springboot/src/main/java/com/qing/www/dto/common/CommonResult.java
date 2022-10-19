@@ -1,4 +1,4 @@
-package com.qing.www.util.common;
+package com.qing.www.dto.common;
 
 import com.qing.www.util.exception.ServiceException;
 import lombok.AllArgsConstructor;

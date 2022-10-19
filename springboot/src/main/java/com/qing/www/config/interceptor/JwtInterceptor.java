@@ -12,17 +12,14 @@ import com.qing.www.po.Admin;
 import com.qing.www.po.Student;
 import com.qing.www.po.Teacher;
 import com.qing.www.service.IAdminService;
-import com.qing.www.service.ILoginService;
 import com.qing.www.service.IStudentService;
 import com.qing.www.service.ITeacherService;
-import com.qing.www.util.common.CommonEnum;
-import com.qing.www.util.common.CommonResult;
+import com.qing.www.dto.common.CommonEnum;
 import com.qing.www.util.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

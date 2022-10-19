@@ -5,14 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][前后端][websocket封装以及基础操作]">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ClientWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ScheduleTaskList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/ConfigurerSchedulingConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/WebSocketEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/vo/WebSocketClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/MyWebConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/MyWebConfigurer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/config/interceptor/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ClientWebSocket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ExamManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dao/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/po/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dto/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/ILoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/BaseErrorInfoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dto/common/BaseErrorInfoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dto/common/CommonEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/common/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dto/common/CommonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/exception/ServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/exception/ServiceExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/exception/ServiceExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/exam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/exam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/examMsg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/teacher/home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/utils/socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/utils/socket.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/vuex/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +46,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Vue Single File Component" />
-        <option value="Class" />
         <option value="TypeScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,6 +109,11 @@
     ]
   }
 }</component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="dev" />
+    </force-push-targets>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Work\workspace\web\Anyview\vue\src" />
@@ -189,6 +215,11 @@
       <workItem from="1665571118407" duration="2213000" />
       <workItem from="1665835258182" duration="8750000" />
       <workItem from="1665851109401" duration="8962000" />
+      <workItem from="1665923196248" duration="281000" />
+      <workItem from="1665923518509" duration="213000" />
+      <workItem from="1665925795303" duration="21964000" />
+      <workItem from="1666147804452" duration="5132000" />
+      <workItem from="1666177736533" duration="9905000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -330,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665500319539</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="[已完成][前后端][websocket封装以及基础操作]">
+      <created>1665923237341</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1665923237341</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

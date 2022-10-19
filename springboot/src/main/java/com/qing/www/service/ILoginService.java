@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.qing.www.po.Admin;
 import com.qing.www.po.Student;
 import com.qing.www.po.Teacher;
-import com.qing.www.po.dto.LoginDto;
+import com.qing.www.dto.LoginDto;
 
 public interface ILoginService extends IService<LoginDto> {
     public Admin adminLogin(LoginDto loginDto);

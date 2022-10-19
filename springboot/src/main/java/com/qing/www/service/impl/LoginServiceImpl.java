@@ -1,6 +1,5 @@
 package com.qing.www.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.log.Log;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -8,13 +7,13 @@ import com.qing.www.dao.LoginMapper;
 import com.qing.www.po.Admin;
 import com.qing.www.po.Student;
 import com.qing.www.po.Teacher;
-import com.qing.www.po.dto.LoginDto;
+import com.qing.www.dto.LoginDto;
 import com.qing.www.service.IAdminService;
 import com.qing.www.service.ILoginService;
 import com.qing.www.service.IStudentService;
 import com.qing.www.service.ITeacherService;
 import com.qing.www.util.TokenUtils;
-import com.qing.www.util.common.CommonEnum;
+import com.qing.www.dto.common.CommonEnum;
 import com.qing.www.util.exception.ServiceException;
 import org.springframework.stereotype.Service;
 

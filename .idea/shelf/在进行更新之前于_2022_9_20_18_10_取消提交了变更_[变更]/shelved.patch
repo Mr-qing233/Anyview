@@ -1,0 +1,30 @@
+Index: springboot/src/main/java/com/qing/www/controller/ExamManageController.java
+===================================================================
+diff --git a/springboot/src/main/java/com/qing/www/controller/ExamManageController.java b/springboot/src/main/java/com/qing/www/controller/ExamManageController.java
+--- a/springboot/src/main/java/com/qing/www/controller/ExamManageController.java	
++++ b/springboot/src/main/java/com/qing/www/controller/ExamManageController.java	
+@@ -1,6 +1,8 @@
+ package com.qing.www.controller;
+ 
++import com.baomidou.mybatisplus.core.metadata.IPage;
+ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
++import com.qing.www.util.common.CommonResult;
+ import org.springframework.web.bind.annotation.*;
+ import javax.annotation.Resource;
+ import java.util.List;
+@@ -39,6 +41,15 @@
+         return examManageService.list();
+     }
+ 
++    @GetMapping("/exams/{page}/{size}")
++    public CommonResult findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
++        System.out.println("分页查询所有试卷");
++
++        Page<ExamManage> examManage = new Page<>(page,size);
++        IPage<ExamManage> all = examManageService.findAll(examManage);
++        return CommonResult.Success(all);
++    }
++
+     @GetMapping("/{id}")
+     public List<ExamManage> findOne(@PathVariable Integer id) {
+         return examManageService.list();

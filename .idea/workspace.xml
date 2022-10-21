@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][后端][数据库轮询实现]">
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/dto/WebSocketResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/WebSocketResultEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/vo/Dialog.java" afterDir="false" />
+    <list default="true" id="5a95346c-e88b-4311-9c1e-3ffed96ff2e4" name="变更" comment="[已完成][前后端][考试信息变更弹窗通知]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ClientWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ClientWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ScheduleTaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/component/ScheduleTaskList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/WebSocketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/qing/www/util/WebSocketHashMapEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/components/student/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/student/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/utils/socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/utils/socket.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/vuex/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/vuex/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +68,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/vue/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Work/workspace/web/Anyview/sql&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4eae35f1b35977a00ebd8086c259d4c9&quot;,
@@ -101,11 +88,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Work\workspace\web\Anyview\sql" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\teacher" />
       <recent name="G:\Work\workspace\web\Anyview\vue\src\components\student" />
       <recent name="G:\Work\workspace\web\Anyview\vue" />
-      <recent name="G:\Work\workspace\web\Anyview\springboot\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.qing.www.util" />
@@ -207,7 +194,8 @@
       <workItem from="1666177736533" duration="10288000" />
       <workItem from="1666255164226" duration="712000" />
       <workItem from="1666275778402" duration="9038000" />
-      <workItem from="1666343000822" duration="16992000" />
+      <workItem from="1666343000822" duration="17202000" />
+      <workItem from="1666368419766" duration="380000" />
     </task>
     <task id="LOCAL-00001" summary="Mybatis-Plus数据库基本操作">
       <created>1662778576314</created>
@@ -363,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666194864959</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[已完成][前后端][考试信息变更弹窗通知]">
+      <created>1666368120497</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666368120497</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,13 +375,28 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -414,7 +424,8 @@
     <MESSAGE value="[未完成][前端][websocket封装]&#10;[已完成][后端][websocket基础实现]" />
     <MESSAGE value="[已完成][前后端][websocket封装以及基础操作]" />
     <MESSAGE value="[已完成][后端][数据库轮询实现]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[已完成][后端][数据库轮询实现]" />
+    <MESSAGE value="[已完成][前后端][考试信息变更弹窗通知]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[已完成][前后端][考试信息变更弹窗通知]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

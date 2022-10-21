@@ -7,9 +7,7 @@
  * @Date: 2021-08-06 11:14:39
  * @LastEditTime: 2021-10-26 14:06:34
  */
-import { ElMessage } from 'element-plus'
-import {store} from "@/vuex/store";
-
+import {ElMessage} from 'element-plus'
 
 
 interface socket {
@@ -24,7 +22,6 @@ interface socket {
     reconnect_number: number
     reconnect_timer: any
     reconnect_interval: number
-    cardId: any,
     init: (receiveMessage: Function | null) => any
     receive: (message: any) => void
     heartbeat: () => void
@@ -32,29 +29,34 @@ interface socket {
     close: () => void
     reconnect: () => void
 }
+let cardId:any
+let user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")||'0') : null;
+if (user){
+    cardId = user.cardId
+}
 
 const socket: socket = {
     websocket: null,
-    connectURL: 'ws://192.168.101.145:8081/client/',
+    connectURL: `ws://192.168.101.145:8081/client/${cardId}`,
     // 开启标识
     socket_open: false,
     // 心跳timer
     heartbeat_timer: null,
     // 心跳发送频率
-    heartbeat_interval: 45000,
+    heartbeat_interval: 60000,
     // 是否自动重连
     is_reconnect: true,
     // 重连次数
     reconnect_count: 3,
     // 已发起重连次数
-    reconnect_current: 1,
+    reconnect_current: 0,
     // 网络错误提示此时
     reconnect_number: 0,
-    cardId: null,
     // 重连timer
     reconnect_timer: null,
     // 重连频率
-    reconnect_interval: 5000,
+    reconnect_interval: 10000,
+
 
     init: (receiveMessage: Function | null) => {
         if (!('WebSocket' in window)) {
@@ -62,11 +64,11 @@ const socket: socket = {
             return null
         }
         // 已经创建过连接不再重复创建
-        // if (socket.websocket) {
-        //   return socket.websocket
-        // }
+        if (socket.websocket) {
+          return socket.websocket
+        }
 
-        socket.websocket = new WebSocket(socket.connectURL+socket.cardId)
+        socket.websocket = new WebSocket(socket.connectURL)
         socket.websocket.onmessage = (e: any) => {
             if (receiveMessage) {
                 receiveMessage(e)
@@ -100,9 +102,11 @@ const socket: socket = {
             socket.socket_open = true
             socket.is_reconnect = true
             // 开启心跳
-            // socket.heartbeat()
+            socket.heartbeat()
         }
-
+        window.onbeforeunload = function () {
+            socket.close();
+        };
         // 连接发生错误
         socket.websocket.onerror = function() {}
     },
@@ -121,7 +125,7 @@ const socket: socket = {
             if (socket.reconnect_number < 1) {
                 ElMessage({
                     type: 'error',
-                    message: "opening",
+                    message: "服务器连接断开",
                     duration: 0,
                 })
             }
@@ -130,9 +134,7 @@ const socket: socket = {
     },
 
     receive: (message: any) => {
-        let params = JSON.parse(message.data)
-        params = JSON.parse(params)
-        return params
+        return JSON.parse(message.data)
     },
 
     heartbeat: () => {
@@ -141,15 +143,12 @@ const socket: socket = {
         }
 
         socket.heartbeat_timer = setInterval(() => {
-            let data = {
-                cardId: store.state.userInfo.cardId,
+            const data = {
+                cardId: cardId,
                 content: 'ping',
             }
-            const sendDara = {
-                encryption_type: 'base64',
-                data: JSON.stringify(data),
-            };
-            socket.send(sendDara)
+            socket.send(JSON.stringify(data))
+            console.log("发送:"+JSON.stringify(data))
         }, socket.heartbeat_interval)
     },
 
@@ -166,7 +165,7 @@ const socket: socket = {
         if (socket.websocket && !socket.is_reconnect) {
             socket.close()
         }
-
+        console.log("重连中")
         socket.init(null)
     },
 }

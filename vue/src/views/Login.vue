@@ -53,8 +53,6 @@ const login =()=>{
           sessionStorage.setItem("user",JSON.stringify(res.data))//存储session
           store.state.userInfo = res.data
           let resData=res.data
-          socket.cardId = resData.cardId
-          socket.init(receiveMessage)
           switch (resData.permission.valueOf()){
             case 0://管理员
               router.push("/admin")
@@ -77,10 +75,6 @@ const login =()=>{
   })
 }
 
-const receiveMessage=(message: any)=> {
-  let msg = message.data
-  console.log(msg)
-}
 
 onUnmounted(()=>{
 

@@ -7,6 +7,10 @@ export const store = createStore({
         isPractice: false, //练习模式标志
         flag: false, //菜单栏左右滑动标志
         userInfo: null,
+        webSocketMessage: {
+            flag: false,
+            msg: null
+        },
         menu: [{
             index: '1',
             title: '考试管理',

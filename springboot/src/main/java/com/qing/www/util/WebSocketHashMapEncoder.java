@@ -7,7 +7,6 @@ import com.qing.www.util.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 import java.util.HashMap;
@@ -17,8 +16,8 @@ import java.util.HashMap;
  *     WebSocket编码器
  * </p>
  */
-public class WebSocketEncoder implements Encoder.Text<HashMap>{
-    private static final Logger log = LoggerFactory.getLogger(WebSocketEncoder.class);
+public class WebSocketHashMapEncoder implements Encoder.Text<HashMap>{
+    private static final Logger log = LoggerFactory.getLogger(WebSocketHashMapEncoder.class);
 
 
     /**

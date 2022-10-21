@@ -16,22 +16,28 @@
 
     <!--路由区域-->
     <div class="main">
+
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {onMounted, ref} from "vue";
+import {onMounted, reactive, ref} from "vue";
 import socket from "@/utils/socket";
+import {store} from "@/vuex/store";
+import {ElMessageBox} from "element-plus";
 
 const activeIndex = ref('1')
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 
+
+
 </script>
 
 <style scoped>
 @import "../../assets/css/common.css";
+
 </style>

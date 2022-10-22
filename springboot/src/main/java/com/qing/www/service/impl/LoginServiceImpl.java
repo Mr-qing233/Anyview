@@ -4,6 +4,7 @@ import cn.hutool.log.Log;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.qing.www.dao.LoginMapper;
+import com.qing.www.dao.StudentMapper;
 import com.qing.www.po.Admin;
 import com.qing.www.po.Student;
 import com.qing.www.po.Teacher;
@@ -15,6 +16,7 @@ import com.qing.www.service.ITeacherService;
 import com.qing.www.util.TokenUtils;
 import com.qing.www.dto.common.CommonEnum;
 import com.qing.www.util.exception.ServiceException;
+import com.qing.www.vo.StudentVo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -30,6 +32,8 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, LoginDto> impleme
     private ITeacherService teacherService;
     @Resource
     private IStudentService studentService;
+    @Resource
+    private StudentMapper studentMapper;
 
     @Override
     public Admin adminLogin(LoginDto loginDto) {
@@ -78,22 +82,18 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, LoginDto> impleme
             throw new ServiceException(CommonEnum.USER_PASSWORD_ERROR);
         }
     }
-
     @Override
-    public Student studentLogin(LoginDto loginDto) {
-        QueryWrapper<Student> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("cardId", loginDto.getCardId());
-        queryWrapper.eq("pwd", loginDto.getPwd());
-        Student one;
+    public StudentVo studentLogin(LoginDto loginDto) {
+        StudentVo one;
         try{
-            one = studentService.getOne(queryWrapper);//获取数据库对应数据
+            one = studentMapper.findStudentInfo(loginDto.getCardId(),loginDto.getPwd());//获取数据库对应数据
         }catch (Exception e){
             LOG.error(e);
             throw new ServiceException(CommonEnum.ERROR_SEARCH_SERVICE);//查找失败抛出业务异常
         }
         if(one != null){//如果查询有结果
             //设置token
-            String token = TokenUtils.generateToken(one.getCardId().toString(), one.getPwd());
+            String token = TokenUtils.generateToken(loginDto.getCardId(), loginDto.getPwd());
             one.setToken(token);
             return one;//返回查询信息，登录成功
 

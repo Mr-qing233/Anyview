@@ -37,4 +37,10 @@ public class ExamManageServiceImpl extends ServiceImpl<ExamManageMapper, ExamMan
         return examManageMapper.findAll(page);
     }
 
+    @Override
+    public IPage<ExamManage> findAllByClazz(Page<ExamManage> page, Integer clazzId) {
+        return examManageMapper.findAllByClazz(page,clazzId);
+    }
+
+
 }

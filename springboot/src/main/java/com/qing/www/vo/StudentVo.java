@@ -1,28 +1,13 @@
-package com.qing.www.po;
-
-import java.io.Serializable;
+package com.qing.www.vo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author Gin
- * @since 2022-09-11
- */
-@Getter
-@Setter
-public class Student implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
+@Data
+public class StudentVo {
     /**
      * 学生id
      */
@@ -74,6 +59,18 @@ public class Student implements Serializable {
      */
     @TableField(exist = false)
     private String token;
+    /**
+     * 学院
+     */
+    private String institute;
 
+    /**
+     * 专业
+     */
+    private String major;
 
+    /**
+     * 班别
+     */
+    private Integer number;
 }

@@ -8,6 +8,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.qing.www.dao.StudentMapper;
 import com.qing.www.po.Admin;
 import com.qing.www.po.Student;
 import com.qing.www.po.Teacher;
@@ -16,10 +17,12 @@ import com.qing.www.service.IStudentService;
 import com.qing.www.service.ITeacherService;
 import com.qing.www.dto.common.CommonEnum;
 import com.qing.www.util.exception.ServiceException;
+import com.qing.www.vo.StudentVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -29,8 +32,8 @@ public class JwtInterceptor implements HandlerInterceptor {
     private IAdminService adminService;
     @Autowired
     private ITeacherService teacherService;
-    @Autowired
-    private IStudentService studentService;
+    @Resource
+    private StudentMapper studentMapper;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -83,14 +86,12 @@ public class JwtInterceptor implements HandlerInterceptor {
                     throw new ServiceException(CommonEnum.TOKEN_VALIDATE_ERROR);
                 }
             case '8':
-                QueryWrapper<Student> studentQueryWrapper = new QueryWrapper<>();
-                studentQueryWrapper.eq("cardId",cardId);
-                Student student = studentService.getOne(studentQueryWrapper);
-                if (student==null){
+                StudentVo studentVo = studentMapper.confirmStudentInfo(cardId);
+                if (studentVo==null){
                     throw new ServiceException(CommonEnum.USER_NOT_FOUND);
                 }
                 //用户密码加签验证token
-                JWTVerifier jwtVerifierStudent = JWT.require(Algorithm.HMAC256(student.getPwd())).build();
+                JWTVerifier jwtVerifierStudent = JWT.require(Algorithm.HMAC256(studentVo.getPwd())).build();
                 try {
                     jwtVerifierStudent.verify(token);
                 }catch (JWTVerificationException e) {

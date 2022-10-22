@@ -51,6 +51,14 @@ public class ExamManageController {
         return CommonResult.Success(all);
     }
 
+    @GetMapping("/exams/{page}/{size}/{clazzId}")
+    public CommonResult findAllByClazz(@PathVariable("page") Integer page, @PathVariable("size") Integer size,@PathVariable("clazzId") Integer clazzId){
+        System.out.println("分页查询该班级所有试卷");
+        Page<ExamManage> examManage = new Page<>(page,size);
+        IPage<ExamManage> all = examManageService.findAllByClazz(examManage,clazzId);
+        return CommonResult.Success(all);
+    }
+
     @GetMapping("/exam/{examCode}")
     public CommonResult findById(@PathVariable("examCode") Integer examCode){
         System.out.println("根据ID查找");
@@ -60,6 +68,7 @@ public class ExamManageController {
         }
         return CommonResult.Success(res);
     }
+
 
     @GetMapping("/{id}")
     public List<ExamManage> findOne(@PathVariable Integer id) {

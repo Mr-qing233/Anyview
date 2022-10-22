@@ -11,7 +11,7 @@ import java.util.Collections;
 public class CodeGenerator {
     public static final String DATASOURCE="anyview";
     public static final String basePath="G:\\Work\\workspace\\web\\Anyview\\springboot\\";
-    public static final String tableName="teacher";
+    public static final String tableName="clazz";
     public static final String modelName="";
 
     public static final String url="jdbc:mysql://localhost:3306/"+DATASOURCE;

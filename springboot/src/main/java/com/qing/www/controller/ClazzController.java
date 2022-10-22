@@ -1,12 +1,12 @@
 package com.qing.www.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qing.www.po.Clazz;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 
 import com.qing.www.service.IClazzService;
-import com.qing.www.entity.Clazz;
 
 
 /**

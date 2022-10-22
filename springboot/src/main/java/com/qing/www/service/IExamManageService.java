@@ -18,4 +18,5 @@ import java.util.List;
 public interface IExamManageService extends IService<ExamManage> {
     List<ExamManage> findAll();
     IPage<ExamManage> findAll(Page<ExamManage> page);
+    IPage<ExamManage> findAllByClazz(Page<ExamManage> page,Integer clazzId);
 }

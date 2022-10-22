@@ -1,7 +1,7 @@
-package com.qing.www.mapper;
+package com.qing.www.dao;
 
-import com.qing.www.entity.Clazz;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.qing.www.po.Clazz;
 
 /**
  * <p>

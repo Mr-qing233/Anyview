@@ -1,7 +1,7 @@
 package com.qing.www.service;
 
-import com.qing.www.entity.Clazz;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.qing.www.po.Clazz;
 
 /**
  * <p>

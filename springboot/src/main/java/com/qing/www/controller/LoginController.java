@@ -9,6 +9,7 @@ import com.qing.www.service.ILoginService;
 import com.qing.www.dto.common.CommonEnum;
 import com.qing.www.dto.common.CommonResult;
 import com.qing.www.util.exception.ServiceException;
+import com.qing.www.vo.StudentVo;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,7 +41,7 @@ public class LoginController {
                 Teacher teacher = loginService.teacherLogin(loginDto);
                 return CommonResult.Success(teacher);
             case 8:
-                Student student = loginService.studentLogin(loginDto);
+                StudentVo student = loginService.studentLogin(loginDto);
                 return CommonResult.Success(student);
             default:
                 throw new ServiceException(CommonEnum.ACCOUNT_ERROR);

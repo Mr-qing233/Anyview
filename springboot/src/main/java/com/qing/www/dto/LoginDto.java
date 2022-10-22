@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 public class LoginDto {
     @JsonProperty("cardId")
-    private Integer cardId;
+    private String cardId;
     @JsonProperty("pwd")
     private String pwd;
 }

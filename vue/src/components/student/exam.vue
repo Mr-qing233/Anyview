@@ -54,10 +54,15 @@ const pagination=reactive<any>({
     size:<number> 6 ,//每页条数
     records:[]
 })
-const state=reactive({pagination})
+let user = sessionStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")||'0') : null;
+const state=reactive({
+  pagination,
+  user
+})
 //获取当前所有考试信息
 const getExamInfo=()=>{
-  request.get(`/exam-manage/exams/${state.pagination.current}/${state.pagination.size}`).then((res:any)=>{
+  console.log(state.user.clazzId)
+  request.get(`/exam-manage/exams/${state.pagination.current}/${state.pagination.size}/${state.user.clazzId}`).then((res:any)=>{
       state.pagination=res.data
       loading.value=false
       console.log(state)

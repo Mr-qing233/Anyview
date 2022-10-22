@@ -40,20 +40,12 @@ public class Student implements Serializable {
      */
     private Integer grade;
 
-    /**
-     * 学院
-     */
-    private String institute;
 
     /**
-     * 专业
+     * 班级唯一Id
      */
-    private String major;
-
-    /**
-     * 班级
-     */
-    private Integer clazz;
+    @TableField(value = "clazzId")
+    private Integer clazzId;
 
     /**
      * 账号

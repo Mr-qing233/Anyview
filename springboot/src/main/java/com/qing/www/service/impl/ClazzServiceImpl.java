@@ -1,7 +1,7 @@
 package com.qing.www.service.impl;
 
-import com.qing.www.entity.Clazz;
-import com.qing.www.mapper.ClazzMapper;
+import com.qing.www.dao.ClazzMapper;
+import com.qing.www.po.Clazz;
 import com.qing.www.service.IClazzService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

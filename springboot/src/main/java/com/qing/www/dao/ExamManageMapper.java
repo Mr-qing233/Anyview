@@ -24,4 +24,7 @@ public interface ExamManageMapper extends BaseMapper<ExamManage> {
     @Select("select * from exam_manage")
     IPage<ExamManage> findAll(Page page);
 
+    @Select("SELECT em1.* FROM exam_manage em1, exam_clazz e1 WHERE em1.`examCode` = e1.`examCode` AND e1.`clazzId` = #{clazzId}")
+    IPage<ExamManage> findAllByClazz(Page page,Integer clazzId);
+
 }

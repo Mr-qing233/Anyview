@@ -67,6 +67,7 @@ const index=()=> {
 const exit=()=> {
   router.push("/")
   localStorage.removeItem("user")
+  sessionStorage.removeItem("user")
   ElMessage.success("退出成功")
 }
 </script>

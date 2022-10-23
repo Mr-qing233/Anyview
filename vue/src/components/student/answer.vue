@@ -83,7 +83,7 @@
           <div class="title">
             <p>{{state.title}}</p>
             <i class="iconfont icon-right auto-right"></i>
-            <span>全卷共{{topicCount[0] + topicCount[1] + topicCount[2]}}题  <i class="iconfont icon-time"></i>倒计时：<b>{{time}}</b>分钟</span>
+            <span>全卷共{{topicCount[0] + topicCount[1] + topicCount[2]}}题  <i class="iconfont icon-time"></i>倒计时：<b>{{times.time}}</b></span>
           </div>
           <div class="content">
             <p class="topic"><span class="number">{{state.number}}</span>{{state.showQuestion}}</p>
@@ -146,7 +146,7 @@
 
 <script lang="ts" setup>
 
-import {computed, onMounted, reactive, ref} from "vue";
+import {computed, onBeforeMount, onMounted, reactive, ref} from "vue";
 import {useRoute} from "vue-router";
 import request from "@/utils/request";
 import {ElMessage, ElMessageBox} from "element-plus";
@@ -245,6 +245,7 @@ const getExamData=()=> { //获取当前试卷所有信息
   let examCode = route.query.examCode//获取路由传递过来的试卷编号
   request.get(`/exam-manage/exam/${examCode}`).then((res:any) => {  //通过examCode请求试卷详细信息
     state.examData = { ...res.data} //获取考试详情
+    console.log(state.examData);
     state.index = 0
     //使用websocket获取 time = state.examData.totalScore //获取分钟数
     let paperId = state.examData.paperId
@@ -429,6 +430,40 @@ const mark=()=> { //标记功能
   }
 }
 
+/**
+ * 以下三个时间使用websocket实现
+ */
+/**
+ * 还未进行websocket获取时间
+ */
+let time=ref<any>(null) //考试持续时间
+let startTime=ref<any>(null)//考试开始时间
+let endTime=ref<any>(null) //考试结束时间
+
+const times = reactive<any>({
+  time,
+  timer:null,
+})
+
+const countDown=()=>{
+  times.timer = setInterval(()=>{
+    if(store.state.time>0){
+      times.time = gotTime(store.state.time)
+      store.state.time--
+    }
+    if (store.state.time <= 0){
+      commit()
+    }
+  },1000)
+}
+
+const gotTime=(time:number)=>{
+  let hours = Math.floor(time /3600);
+  let minutes = Math.floor(time % 3600 / 60);
+  let seconds = time % 60;
+  return hours + ":" + minutes + ":" + seconds;
+}
+
 const getTime=(date:any)=> { //日期格式化
   let year = date.getFullYear()
   let month= date.getMonth()+ 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
@@ -440,15 +475,8 @@ const getTime=(date:any)=> { //日期格式化
   return year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
 }
 
-/**
- * 以下三个时间使用websocket实现
- */
-/**
- * 还未进行websocket获取时间
- */
-let time=ref<any>(null) //考试持续时间
-let startTime=ref<any>(null)//考试开始时间
-let endTime=ref<any>(null) //考试结束时间
+
+
 
 const commit=()=> { //答案提交计算分数
   /* 计算选择题总分 */
@@ -503,7 +531,7 @@ const commit=()=> { //答案提交计算分数
     }
   })
   console.log(`目前总分${finalScore}`)
-  if(time != 0) {
+  if(store.state.time != 0) {
     ElMessageBox.confirm("考试结束时间未到,是否提前交卷","友情提示",{
       confirmButtonText: '立即交卷',
       cancelButtonText: '再检查一下',
@@ -539,28 +567,28 @@ const commit=()=> { //答案提交计算分数
   }
 }
 
-const showTime=()=> { //倒计时
-  setInterval(() => {
-    time -= 1
-    if(time == 10) {
-      ElMessage.error({
-        showClose: true,
-        message: '考生注意,考试时间还剩10分钟！！！'
-      })
-      if(time == 0) {
-        console.log("考试时间已到,强制交卷。")
-      }
-    }
-  },1000 * 60)
-}
+
 let isPractice = computed(()=>{
   return store.state.isPractice
 })
 
-onMounted(()=>{
+
+const startExam = () =>{
+    let examCode = route.query.examCode
+    let cardId = state.user.cardId
+    request.post(`exam-manage/startExam/${examCode}/${cardId}`)
+}
+
+
+
+onBeforeMount(()=>{
   getLocalStorage()
   getExamData()
-  showTime()
+})
+
+onMounted(()=>{
+  startExam()
+  countDown()
 })
 
 </script>

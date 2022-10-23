@@ -23,10 +23,17 @@ const receiveMessage=(message: any)=> {
     //let params = JSON.parse(message.data)
     let params = JSON.parse(message.data)
     /**
-     * 如果是公告消息,则存入store
+     * 如果是公告消息,则存入store中webSocketMessage
      */
     if(params.flag==1){
         store.state.webSocketMessage = params.data
+    }
+    /**
+     * 如果是考试剩余时间,则存入store中time
+     */
+    if(params.flag==2){
+        store.state.time = params.data
+        console.log(store.state.time)
     }
     console.log(params)
 }

@@ -20,9 +20,10 @@
 </template>
 
 <script lang="ts" setup>
-import {ref, provide, nextTick, reactive} from 'vue'
+import {ref, provide, nextTick, reactive, onUnmounted} from 'vue'
 import {ElMessageBox} from "element-plus";
 import {store} from "@/vuex/store";
+import {ElMessage} from "element-plus/es";
 
 const isRouterAlive  = ref(true);
 const reload = () => {
@@ -40,6 +41,12 @@ const handleClose=(done:any)=> { //关闭提醒
         done();
       }).catch(_ => {});
 }
+
+onUnmounted(()=>{
+  localStorage.removeItem("user")
+  sessionStorage.removeItem("user")
+  ElMessage.success("退出成功")
+})
 
 </script>
 <style lang="less">

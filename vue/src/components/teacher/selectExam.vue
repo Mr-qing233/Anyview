@@ -26,7 +26,7 @@
           <el-button v-if="scope.row.state===0" @click="confirm(scope.row.examCode,-1)" type="primary" size="small">准备</el-button>
           <el-button v-if="scope.row.state===-1" @click="confirm(scope.row.examCode,1)" type="primary" size="small">开始</el-button>
           <el-button v-if="scope.row.state===1" @click="confirm(scope.row.examCode,2)" type="primary" size="small">结束</el-button>
-          <el-button v-if="scope.row.state===1" @click="" type="primary" size="small">延时</el-button>
+          <el-button v-if="scope.row.state===1" @click="delay(scope.row.examCode)" type="primary" size="small">延时</el-button>
           <el-button v-if="scope.row.state===2" @click="" type="primary" size="small">批改</el-button>
         </template>
       </el-table-column>
@@ -107,6 +107,21 @@
         <el-button @click="deleteRecord(state.form.examCode)" type="danger">删除</el-button>
       </span>
     </el-dialog>
+    <!-- 延迟对话框-->
+    <el-dialog
+        title="确认操作"
+        v-model="dialogVisibleDelay"
+        width="30%"
+        :before-close="handleClose">
+      <div class="confirm">请输入延迟时间(min)</div>
+      <el-input v-model="min" placeholder="Please input" />
+      <div class="buttons">
+        <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisibleConfirm = false">取 消</el-button>
+        <el-button type="primary" @click="submitDelay(min)">确 定</el-button>
+      </span>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -131,7 +146,7 @@ const state=reactive<any>({
 
 const dialogVisibleEdit=ref<boolean|null>()
 const dialogVisibleConfirm=ref<boolean|null>()
-
+const dialogVisibleDelay=ref<boolean|null>(false)
 
 
 const getExamInfo=()=> { //分页查询所有试卷信息
@@ -165,6 +180,33 @@ const confirm =(examCode:any,examState:any)=>{
     }
   })
 }
+const min = ref<any>('')
+const delay = (examCode:any)=>{
+  dialogVisibleDelay.value = true
+  request.get(`/exam-manage/exam/${examCode}`).then((res:any) => { //根据试卷id请求后台
+    if(res.code == '200') {
+      state.form = res.data
+    }
+  })
+}
+
+const submitDelay=(time:any)=>{
+  dialogVisibleDelay.value = false
+  request({
+    url:`/exam-manage/examDelay/${time}`,
+    method:'put',
+    data:{
+      ...state.form
+    }
+  }).then((res:any)=>{
+    if(res.code == '200'){
+      ElMessage.success("考试状态改变")
+    }
+    getExamInfo()
+  })
+
+}
+
 
 const submitState=()=>{//更改状态
   dialogVisibleConfirm.value = false

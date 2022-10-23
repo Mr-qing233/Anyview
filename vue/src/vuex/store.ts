@@ -7,6 +7,7 @@ export const store = createStore({
         isPractice: false, //练习模式标志
         flag: false, //菜单栏左右滑动标志
         userInfo: null,
+        time:<number|null> null,//考试剩余时间
         webSocketMessage: {
             flag: false,
             msg: null

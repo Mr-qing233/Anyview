@@ -33,6 +33,37 @@ CREATE TABLE `admin` (
 
 insert  into `admin`(`adminId`,`adminName`,`pwd`,`cardId`,`permission`) values (2021010001,'管理员','123','1000',0);
 
+/*Table structure for table `clazz` */
+
+DROP TABLE IF EXISTS `clazz`;
+
+CREATE TABLE `clazz` (
+  `clazzId` int NOT NULL AUTO_INCREMENT COMMENT '班级唯一id',
+  `institute` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '学院',
+  `major` char(20) DEFAULT NULL COMMENT '专业',
+  `number` int DEFAULT NULL COMMENT '班别',
+  PRIMARY KEY (`clazzId`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `clazz` */
+
+insert  into `clazz`(`clazzId`,`institute`,`major`,`number`) values (1,'计算机学院','软件工程',1),(2,'计算机学院','软件工程',2),(3,'计算机学院','软件工程',3),(4,'计算机学院','软件工程',4),(5,'计算机学院','计算机科学',1),(6,'计算机学院','计算机科学',2),(7,'计算机学院','计算机科学',3),(8,'计算机学院','计算机科学',4),(9,'计算机学院','网络工程',1),(10,'计算机学院','网络工程',2),(11,'计算机学院','网络工程',3);
+
+/*Table structure for table `exam_clazz` */
+
+DROP TABLE IF EXISTS `exam_clazz`;
+
+CREATE TABLE `exam_clazz` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `examCode` int DEFAULT NULL,
+  `clazzId` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `exam_clazz` */
+
+insert  into `exam_clazz`(`id`,`examCode`,`clazzId`) values (1,20220001,1),(2,20220001,2),(3,20220001,3),(4,20220001,4),(5,20220002,1),(6,20220002,3);
+
 /*Table structure for table `exam_manage` */
 
 DROP TABLE IF EXISTS `exam_manage`;
@@ -57,7 +88,7 @@ CREATE TABLE `exam_manage` (
 
 /*Data for the table `exam_manage` */
 
-insert  into `exam_manage`(`examCode`,`description`,`source`,`paperId`,`startTime`,`endTime`,`grade`,`term`,`major`,`institute`,`totalScore`,`type`,`tips`,`state`) values (20220001,'2022年上期期末考试','计算机网络',1001,'2022-09-30 12:00:00','2022-10-30 04:00:00','2018','1','计算机科学与技术','计算机学院',80,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',1),(20220002,'2022年上期期末考试','数据库理论',1002,'2022-10-03 12:00:00','2022-10-11 21:56:58','2018','2','网络工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220003,'2022年下期期末考试','数据结构',1003,'2022-10-04 21:56:40','2022-10-11 21:56:58','2017','1','软件工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220005,'2022年上期期末考试','计算机导论',1004,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220006,'2022年上期期末考试','软件工程',1005,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220007,'2022年上期期末考试','操作系统',1006,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','2','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220008,'2022年下期期末考试','C语言',1007,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','信息工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220009,'2022年上期期末考试','高等数学',1008,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','信息工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220013,'测试','测试',1009,'2022-10-04 21:56:40','2022-10-11 21:56:58','2017',NULL,'测试','测试',100,'在线测验','请不要带与考试无关的书籍。',2);
+insert  into `exam_manage`(`examCode`,`description`,`source`,`paperId`,`startTime`,`endTime`,`grade`,`term`,`major`,`institute`,`totalScore`,`type`,`tips`,`state`) values (20220001,'2022年上期期末考试','计算机网络',1001,'2022-09-30 12:00:00','2022-10-30 04:10:00','2018','1','计算机科学与技术','计算机学院',80,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',1),(20220002,'2022年上期期末考试','数据库理论',1002,'2022-10-03 12:00:00','2022-10-11 21:56:58','2018','2','网络工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220003,'2022年下期期末考试','数据结构',1003,'2022-10-04 21:56:40','2022-10-11 21:56:58','2017','1','软件工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220005,'2022年上期期末考试','计算机导论',1004,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220006,'2022年上期期末考试','软件工程',1005,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220007,'2022年上期期末考试','操作系统',1006,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','2','计算机科学与技术','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220008,'2022年下期期末考试','C语言',1007,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','信息工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220009,'2022年上期期末考试','高等数学',1008,'2022-10-04 21:56:40','2022-10-11 21:56:58','2018','1','信息工程','软件工程学院',100,'在线测验','快乐千万条，学习第一条，平时不努力，考试两行泪。',2),(20220013,'测试','测试',1009,'2022-10-04 21:56:40','2022-10-11 21:56:58','2017',NULL,'测试','测试',100,'在线测验','请不要带与考试无关的书籍。',2);
 
 /*Table structure for table `fill_question` */
 
@@ -165,9 +196,7 @@ CREATE TABLE `student` (
   `studentId` int NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `studentName` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '姓名',
   `grade` varchar(4) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '年级',
-  `major` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '专业',
-  `clazz` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '班级',
-  `institute` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '学院',
+  `clazzId` int DEFAULT NULL COMMENT '班级唯一标识',
   `pwd` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '密码',
   `cardId` varchar(18) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '身份证号',
   `sex` varchar(2) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL COMMENT '性别',
@@ -177,7 +206,7 @@ CREATE TABLE `student` (
 
 /*Data for the table `student` */
 
-insert  into `student`(`studentId`,`studentName`,`grade`,`major`,`clazz`,`institute`,`pwd`,`cardId`,`sex`,`permission`) values (2021030001,'张三','2021','软件工程','1','计算机学院','123','10000000','男','2'),(2021030002,'李四','2021','网络工程','4','计算机学院','123','10000001','男','2'),(2021030003,'王五','2021','计算机科学','2','计算机学院','123','10000002','女','2');
+insert  into `student`(`studentId`,`studentName`,`grade`,`clazzId`,`pwd`,`cardId`,`sex`,`permission`) values (2021030001,'张三','2021',1,'123','10000000','男','2'),(2021030002,'李四','2021',2,'123','10000001','男','2'),(2021030003,'王五','2021',3,'123','10000002','女','2');
 
 /*Table structure for table `teacher` */
 
